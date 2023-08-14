@@ -33,17 +33,19 @@ const Home = () => (
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
             <div className={`work-left mr-2`}>
-                <Link to ="/fido" target="_blank" rel="noreferrer">
+                <a href="https://awards.ixda.org/projects/fido-enhancing-trust-between-driver-and-ai-system-in-semi-autonomous-vehicles"target="_blank" rel="noopener noreferrer">
+                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
                     <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" />
-                </Link>
+                </a>
+                {/* </Link> */}
                 <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Master's thesis</paragraph>
 
             </div>
             <div className={`work-right ml-2`}>
-                <Link to ="/fido" target="_blank" rel="noreferrer">
+                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
                     <img class="rounded-xl mb-2" src={MckLanding} alt="Fido" />
-                </Link>
+                {/* </Link> */}
                 <paragraph className={`${styles.paragraph}`}>Incorporating human-centered thinking in AI</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Protected work at Mckinsey</paragraph>
             </div> 
@@ -54,24 +56,24 @@ const Home = () => (
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
             <div className={`work-left mr-2`}>
-                <Link to ="/fido" target="_blank" rel="noreferrer">
+                <a href="https://soheum.github.io/kureate/" target="_blank" rel="noopener noreferrer">
                     <img class="rounded-xl mb-2" src={CureateLanding} alt="Fido" />
-                </Link>
+                </a>
                 <paragraph className={`${styles.paragraph}`}>Curate + Create, personal visual lens</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Personal project</paragraph>
 
             </div>
             <div className={`work-right ml-2`}>
-                <Link to ="/fido" target="_blank" rel="noreferrer">
+                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
                     <img class="rounded-xl mb-2" src={UxLanding} alt="Fido" />
-                </Link>
+                {/* </Link> */}
                 <paragraph className={`${styles.paragraph}`}>UX/UI projects</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Freelance projects</paragraph>
             </div> 
             <div className={`work-right ml-2`}>
-                <Link to ="/fido" target="_blank" rel="noreferrer">
+                <a href="https://designawards.core77.com/Interaction/95544/JOUL-exploring-sustainability-through-play" target="_blank" rel="noopener noreferrer">
                     <img class="rounded-xl mb-2" src={JoulLanding} alt="Fido" />
-                </Link>
+                </a>
                 <paragraph className={`${styles.paragraph}`}>Exploring sustainability through play</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Project during master’s</paragraph>
             </div> 
