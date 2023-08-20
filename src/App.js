@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import { Fido, Home } from './pages';
+import { Fido, Home, Aboutme } from './pages';
 import styles from './style';
 
 const App = () => (
@@ -12,6 +12,7 @@ const App = () => (
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/fido" element={<Fido />} />
+          <Route exact path="/aboutme" element={<Aboutme />} />
         </Routes>   
       </div>
     </div>

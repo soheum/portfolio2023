@@ -3,6 +3,7 @@ import React from 'react';
 import '../App.css';
 import { Routes, Route, NavLink, Link } from 'react-router-dom';
 var FidoLanding = require('../assets/Fido_landing.png');
+var FidoLanding2 = require('../assets/Fido_landing2.png');
 var MckLanding = require('../assets/Mck_landing.png');
 var CureateLanding = require('../assets/Cureate_landing.png');
 var UxLanding = require('../assets/Ux_landing.png');
@@ -10,6 +11,10 @@ var JoulLanding = require('../assets/Joul_landing.png');
 var Insta = require('../assets/logo-instagram.png');
 var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png')
+var Aboutme_1 = require('../assets/aboutme_1.png');
+var Aboutme_2 = require('../assets/aboutme_2.png');
+var Aboutme_3 = require('../assets/aboutme_3.png');
+var Aboutme_4 = require('../assets/aboutme_4.png');
 
 const Home = () => (
     <section className="w-full flex justify-start items-start overflow-hidden">
@@ -25,7 +30,10 @@ const Home = () => (
         </div>
         <div className={`${styles.boxWidth} + mt-2`}>
             <body1 className={`${styles.body1}`} id="exp-text1">interaction designer at Mckinsey Design, </body1> 
-            <body1 className={`${styles.body1}`} id="exp-text2">converging AI and humans through digital and tangible experiences</body1>
+            <body1 className={`${styles.body1}`} id="exp-text2">converging </body1>
+            <body1 className={`${styles.body1} + blue`} >AI and humans</body1>
+            <body1 className={`${styles.body1}`} id="exp-text2"> through </body1>
+            <body1 className={`${styles.body1} + blue`} >strategic thinking and visual explorations</body1>
         </div>
 
         <div className={`${styles.boxWidth} + mt-24`}>
@@ -82,12 +90,35 @@ const Home = () => (
         <div className={`${styles.boxWidth} + mt-12`}>
             <h2 className={`${styles.heading2}`}>About me</h2> 
         </div>
+        <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
+            <div className={`aboutme mr-2`}>
+                <Link to ="/aboutme" target="_blank" rel="noreferrer">
+                    <img class="rounded-xl mb-2" src={Aboutme_1} alt="aboutme" />
+                </Link>
+            </div>
+            <div className={`aboutme mr-2`}>
+                <Link to ="/aboutme" target="_blank" rel="noreferrer">
+                    <img class="rounded-xl mb-2" src={Aboutme_2} alt="aboutme" />
+                </Link>
+            </div> 
+            <div className={`aboutme mr-2`}>
+                <Link to ="/aboutme" target="_blank" rel="noreferrer">
+                    <img class="rounded-xl mb-2" src={Aboutme_3} alt="aboutme" />
+                </Link>
+            </div> 
+            <div className={`aboutme mr-2`}>
+                <Link to ="/aboutme" target="_blank" rel="noreferrer">
+                    <img class="rounded-xl mb-2" src={Aboutme_4} alt="aboutme" />
+                </Link>
+            </div> 
+        </div>
+
     
       </div>
 
-      <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[0.7px] border-t-black ">
+      <div className="w-full flex justify-between items-center mt-24 md:flex-row flex-col pt-6 border-t-[0.7px] border-t-black ">
         <p className="font-pretendard font-light tracking-tight text-[1rem] text-black">
-            2022 Soheum Hwang. All Rights Reserved. 
+            All Rights Reserved by Soheum Hwang, built by me!
         </p>
         <div className="flex flex-row md:mt-0 mt-6">
             <a href={"https://www.instagram.com/sohmnm/"}>

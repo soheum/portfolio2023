@@ -25,14 +25,16 @@
   content: "\a";
   white-space: pre;
 }
-
-.work{
-
+.blue{
+  color: #1E5CFF;
 }
 .work-left{
   flex-grow: 1;
 }
 .work-right{
+  flex-grow: 1;
+}
+.aboutme{
   flex-grow: 1;
 }
 

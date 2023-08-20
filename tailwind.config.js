@@ -9,6 +9,7 @@ module.exports = {
              'secondary': '#ffed4a',
              'danger': '#e3342f',
              'darkblue': '#0E204F',
+             'blue': '#1E5CFF',
            }
     // extend: {},
   },

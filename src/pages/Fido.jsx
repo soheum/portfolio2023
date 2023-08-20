@@ -14,7 +14,7 @@ const Fido = () => (
         </div>
         <div class="xl:max-w-[1280px] + mt-2 + w-6/12">
             <body1 className={`${styles.body1}`}>FiDO is a phy-gital plug-in connected to different semi-autonomous vehicles to enhance trust between the driver and the vehicle's AI system. </body1> <br /> <br />
-            <body1 className={`${styles.body1}`}>This is my master's thesis in Interaction Design at Umeå Institute of Design, shortlisted at Global Graduate Show.</body1>
+            <body1 className={`${styles.body1}`}>This is my master's thesis in Interaction Design at Umeå Institute of Design, <a href="https://awards.ixda.org/projects/fido-enhancing-trust-between-driver-and-ai-system-in-semi-autonomous-vehicles">finalist at IxDA 2023,</a> <a href="https://ux-design-awards.com/winners/fido">shortlisted at UX Design Awards</a> and <a href="https://www.artsthread.com/events/globaldesigngraduateshow/digital-visual-communication-film#/project/fido">Global Graduate Show.</a></body1>
         </div>
         <div class="tm-big">
             <img class="rounded-xl mb-2" src={FidoTitle} alt="Fido" />

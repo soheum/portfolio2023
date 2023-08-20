@@ -4,7 +4,8 @@ const styles = {
     heading2: "font-pretendard font-normal text-[1.5rem] text-darkblue tracking-tighter leading-[66.8px] w-full",
     heading4: "font-pretendard font-light text-[0.85rem] text-black",
     heading5: "font-pretendard font-light text-[0.85rem] text-grey",
-    body1: "font-pretendard font-light text-[1.25rem] text-darkblue tracking-tighter w-full",
+    body1: "font-pretendard font-light text-[1.25rem] text-darkblue tracking-tight w-full",
+    body2: "font-pretendard font-regular text-[1.25rem] text-darkblue tracking-tight w-full",
     paragraph: "font-pretendard font-light tracking-tight text-darkblue text-[1.15rem] leading-tight",
     link: "font-pretendard font-light tracking-tight text-grey text-[1rem] leading-tight w-full",
   
