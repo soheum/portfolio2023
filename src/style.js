@@ -6,7 +6,8 @@ const styles = {
     heading5: "font-pretendard font-light text-[0.85rem] text-grey",
     body1: "font-pretendard font-light text-[1.25rem] text-darkblue tracking-tight w-full",
     body2: "font-pretendard font-regular text-[1.25rem] text-darkblue tracking-tight w-full",
-    paragraph: "font-pretendard font-light tracking-tight text-darkblue text-[1.15rem] leading-tight",
+    paragraph: "font-pretendard font-light tracking-tight text-darkblue text-[1.15rem] leading-normal",
+    paragraph2: "font-pretendard font-regular tracking-tight text-darkblue text-[1.15rem] leading-normal",
     link: "font-pretendard font-light tracking-tight text-grey text-[1rem] leading-tight w-full",
   
     flexCenter: "flex justify-center items-center",

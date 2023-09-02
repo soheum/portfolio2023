@@ -28,6 +28,10 @@
 .blue{
   color: #1E5CFF;
 }
+.grey{
+  color: #C6C8CD;
+  /* text-decoration: underline;   */
+}
 .work-left{
   flex-grow: 1;
 }

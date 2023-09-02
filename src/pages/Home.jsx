@@ -41,11 +41,11 @@ const Home = () => (
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
             <div className={`work-left mr-2`}>
-                <a href="https://awards.ixda.org/projects/fido-enhancing-trust-between-driver-and-ai-system-in-semi-autonomous-vehicles"target="_blank" rel="noopener noreferrer">
-                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
+                {/* <a href="https://awards.ixda.org/projects/fido-enhancing-trust-between-driver-and-ai-system-in-semi-autonomous-vehicles"target="_blank" rel="noopener noreferrer"> */}
+                <Link to ="/fido" target="_blank" rel="noreferrer">
                     <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" />
-                </a>
-                {/* </Link> */}
+                {/* </a> */}
+                </Link>
                 <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Master's thesis</paragraph>
 
