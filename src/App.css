@@ -1,0 +1,50 @@
+.grey-italics {
+  color: #9BA4BC;
+  font-family: Lora;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: -0.09rem;
+}
+
+.number-italics {
+  color: #0E204F;
+  font-family: Lora;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: -0.06rem;
+}
+
+.one-line h1, .one-line p{
+  display: inline;
+  vertical-align: top;
+}
+
+#exp-text1::after{
+  content: "\a";
+  white-space: pre;
+}
+.blue{
+  color: #1E5CFF;
+}
+.grey{
+  color: #C6C8CD;
+  /* text-decoration: underline;   */
+}
+.work-left{
+  flex-grow: 1;
+}
+.work-right{
+  flex-grow: 1;
+}
+.aboutme{
+  flex-grow: 1;
+}
+
+.tm-big{
+  margin-top: 5.5rem;
+}
+.tm-medium{
+  margin-top: 4rem;
+}
