@@ -52,19 +52,28 @@ const Aboutme = () => (
         </div>
      </div>
 
-     <div className="xl:max-w-[1280px] + mt-12 + w-7/12">
-         <body1 className={`${styles.body1}`}>I'm UX designer at Bank of England in London.</body1> <br /><br />
-         <body1 className={`${styles.body1}`}>I design </body1>
-         <body2 className={`${styles.body2}`}>creative digital solutions and create impact across industries</body2>
-         <body1 className={`${styles.body1}`}> by collaborating with business consultants, engineers, researchers and cross-functional stakeholders. </body1> <br /><br />
-         <body1 className={`${styles.body1}`}>I bring my </body1>
-         <body2 className={`${styles.body2}`}>digital craft skills, iterative prototyping and analytical thinking</body2>
-         <body1 className={`${styles.body2}`}> in creating human-centered solutions.</body1> <br /><br />
+     <div className="xl:max-w-[1280px] + mt-12 + w-8/12">
+         {/* <body1 className={`${styles.body1}`}>I'm a Product Designer at Bank of England in London,</body1> <br />
+         <body2 className={`${styles.body2}`}>redefining data collection </body2>
+         <body1 className={`${styles.body1}`}>by putting humans in the center.</body1><br /><br /> */}
+         <body1 className={`${styles.body1}`}>I </body1>
+         <body2 className={`${styles.body1}`}>navigate complex concepts</body2>
+         <body1 className={`${styles.body1}`}> through </body1> 
+         <body2 className={`${styles.body2}`}>strategic thinking and visual storytelling</body2>
+         <body1 className={`${styles.body1}`}> focused on </body1>
+         <body1 className={`${styles.body1} + blue `}>humans.</body1> <br /><br />
+
+         <body1 className={`${styles.body1}`}>I bring together </body1>
+         <body2 className={`${styles.body1}`}>cross-functional stakeholders </body2>
+         <body1 className={`${styles.body1}`}>like developers, engineers and researchers with my </body1>
+         <body2 className={`${styles.body2}`}>digital craft skills, iterative prototyping and analytical thinking</body2> <br /><br />
+       
          <body1 className={`${styles.body1}`}>I enjoy speculating about</body1>
-         <body2 className={`${styles.body2}`}> how AI can empower human skills</body2>
-         <body1 className={`${styles.body1}`}> by envisioning the future of digital experiences with </body1>
+         <body2 className={`${styles.body2}`}> how AI can </body2>
+         <body2 className={`${styles.body2} + blue`}>empower human skills</body2>
+         <body1 className={`${styles.body1}`}> with </body1>
          <body2 className={`${styles.body2}`}>pen & paper, prototyping tools or front-end code. </body2> <br /><br />
-         <body1 className={`${styles.body1}`}>Outside of design, you can find me at the Strand in London jogging or in front of the pottery wheel making ceramics.</body1> <br /><br />
+         <body1 className={`${styles.body1}+ text-light-grey`}>Outside of design, you can find me filming YouTube, jogging at the Strand or getting my handds dirty in front of the ceramic wheel.</body1> <br /><br />
      </div>
      
     </div>

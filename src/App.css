@@ -21,6 +21,10 @@
   vertical-align: top;
 }
 
+.text-light-grey {
+  color: rgb(163 163 163);
+}
+
 #exp-text1::after{
   content: "\a";
   white-space: pre;

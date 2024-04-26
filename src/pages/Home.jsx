@@ -4,9 +4,9 @@ import '../App.css';
 import { Routes, Route, NavLink, Link } from 'react-router-dom';
 var FidoLanding = require('../assets/Fido_landing.png');
 var FidoLanding2 = require('../assets/Fido_landing2.png');
-var MckLanding = require('../assets/Mck_landing.png');
+var KanLanding = require('../assets/Kan_landing.png');
 var CureateLanding = require('../assets/Cureate_landing.png');
-var UxLanding = require('../assets/Ux_landing.png');
+var AiLanding = require('../assets/Ai_landing.png');
 var JoulLanding = require('../assets/Joul_landing.png');
 var Insta = require('../assets/logo-instagram.png');
 var Email = require('../assets/at-sign@3x.png');
@@ -29,11 +29,20 @@ const Home = () => (
             <p class="grey-italics"> - so? hmmm...</p>
         </div>
         <div className={`${styles.boxWidth} + mt-2`}>
-            <body1 className={`${styles.body1}`} id="exp-text1">UX designer at Bank of England </body1> 
+            <body1 className={`${styles.body1}`}>Product designer at </body1> 
+            <a href="https://transformingdatacollection.co.uk/" target="_blank" rel="noopener noreferrer">
+                <body1 className={`${styles.body1} + text-light-grey`} id="exp-text1">Bank of England, transforming data collection </body1> 
+            </a>
             <body1 className={`${styles.body1}`} id="exp-text2">converging </body1>
             <body1 className={`${styles.body1} + blue`} >AI and humans</body1>
             <body1 className={`${styles.body1}`} id="exp-text2"> through </body1>
             <body1 className={`${styles.body1} + blue`} >strategic thinking and visual explorations</body1>
+        </div>
+
+        <div className={`${styles.boxWidth} + mt-6`}>
+        <Link to ="/aboutme" target="_blank" rel="noreferrer">
+            <body1 className={`${styles.body1} + text-light-grey`}>💬  more about me</body1>
+        </Link>
         </div>
 
         <div className={`${styles.boxWidth} + mt-24`}>
@@ -41,21 +50,21 @@ const Home = () => (
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
             <div className={`work-left mr-2`}>
+                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
+                    <img class="rounded-xl mb-2" src={KanLanding} alt="Kan" />
+                {/* </Link> */}
+                <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees</paragraph> <br />
+                <paragraph className={`${styles.link}`}>Digital business building at McKinsey</paragraph>
+
+            </div>
+            <div className={`work-right ml-2`}>
                 {/* <a href="https://awards.ixda.org/projects/fido-enhancing-trust-between-driver-and-ai-system-in-semi-autonomous-vehicles"target="_blank" rel="noopener noreferrer"> */}
                 <Link to ="/fido" target="_blank" rel="noreferrer">
                     <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" />
                 {/* </a> */}
                 </Link>
                 <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Master's thesis</paragraph>
-
-            </div>
-            <div className={`work-right ml-2`}>
-                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
-                    <img class="rounded-xl mb-2" src={MckLanding} alt="Fido" />
-                {/* </Link> */}
-                <paragraph className={`${styles.paragraph}`}>Incorporating human-centered thinking in AI</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Protected work at Mckinsey</paragraph>
+                <paragraph className={`${styles.link}`}>IxDDA 2023 Winner in Disuprting</paragraph>
             </div> 
         </div>
 
@@ -63,31 +72,31 @@ const Home = () => (
             <h2 className={`${styles.heading2}`}>Recent works</h2> 
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
+             <div className={`work-right mr-4`}>
+                {/* <a href="https://apps.apple.com/be/app/emptymyfridge-recipe-by-food/id1550812530" target="_blank" rel="noopener noreferrer"> */}
+                    <img class="rounded-xl mb-2" src={AiLanding} alt="Fido" />
+                {/* </a> */}
+                <paragraph className={`${styles.paragraph}`}>Human-centered thinking in AI</paragraph> <br />
+                <paragraph className={`${styles.link}`}>Work at Mckinsey</paragraph>
+            </div> 
             <div className={`work-left mr-2`}>
                 <a href="https://soheum.github.io/kureate/" target="_blank" rel="noopener noreferrer">
                     <img class="rounded-xl mb-2" src={CureateLanding} alt="Fido" />
                 </a>
                 <paragraph className={`${styles.paragraph}`}>Curate + Create, personal visual lens</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Personal project</paragraph>
-
             </div>
-            <div className={`work-right ml-2`}>
-                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
-                    <img class="rounded-xl mb-2" src={UxLanding} alt="Fido" />
-                {/* </Link> */}
-                <paragraph className={`${styles.paragraph}`}>UX/UI projects</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Freelance projects</paragraph>
-            </div> 
+
             <div className={`work-right ml-2`}>
                 <a href="https://designawards.core77.com/Interaction/95544/JOUL-exploring-sustainability-through-play" target="_blank" rel="noopener noreferrer">
                     <img class="rounded-xl mb-2" src={JoulLanding} alt="Fido" />
                 </a>
                 <paragraph className={`${styles.paragraph}`}>Exploring sustainability through play</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Project during master’s</paragraph>
+                <paragraph className={`${styles.link}`}>Core77 Student Runner Up 2020</paragraph>
             </div> 
         </div>
 
-        <div className={`${styles.boxWidth} + mt-12`}>
+        {/* <div className={`${styles.boxWidth} + mt-12`}>
             <h2 className={`${styles.heading2}`}>About me</h2> 
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
@@ -111,7 +120,7 @@ const Home = () => (
                     <img class="rounded-xl mb-2" src={Aboutme_4} alt="aboutme" />
                 </Link>
             </div> 
-        </div>
+        </div> */}
 
     
       </div>
