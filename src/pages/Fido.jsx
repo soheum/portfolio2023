@@ -19,16 +19,17 @@ var Fido06_3 = require('../assets/Fido_06_3.png');
 var Fido07 = require('../assets/Fido_07.png');
 var Insta = require('../assets/logo-instagram.png');
 var Email = require('../assets/at-sign@3x.png');
-var LinkedIn = require('../assets/logo-linkedin.png')
+var LinkedIn = require('../assets/logo-linkedin.png');
+var Youtube = require('../assets/youtube_icon.png');
 
 const Fido = () => (
     <section className="w-full flex justify-start items-start overflow-hidden">
     <div className="flex-1 flex-col">
       <div className="semi-title">
         <div className={`${styles.boxWidth}`}>
-        <Link to ="/" target="_blank" rel="noreferrer">
+        <Link to ="/" rel="noreferrer">
             <body1 className={`${styles.body1} + text-grey`}>👈🏻 back<br /><br /></body1>
-            </Link>
+        </Link>
         </div>
         <div className={`${styles.boxWidth} + one-line`}>
             <h1 className={`${styles.heading1}`}>FiDO - Enhancing autonomy and trust in autonomous vehicles</h1> 
@@ -151,7 +152,7 @@ const Fido = () => (
 
         <div className="sub-title tm-medium">
             <p class="number-italics">07 /</p>
-            <body1 className={`${styles.body1}`}>Lastly, what did you learh?<br /><br /></body1>
+            <body1 className={`${styles.body1}`}>Lastly, what did you learn?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph}`}>Explainable AI clarifies how intelligent systems work and produce valid reasoning to enhance trust. This is mostly used by developers to improve AI performance rather than focusing on user experience. With FiDO, I explored making AI more understandable for end users by balancing feature transparency and interpretations. Translating AI functionality into user-friendly features was a key role of interaction design in the world of technology. <br/> <br/> 
@@ -172,8 +173,11 @@ const Fido = () => (
             <a href={"https://www.linkedin.com/in/so-heum-hwang/"}>
             <img class="w-[1.25rem] h-[1.25rem]  mr-2 object-contain cursor-pointer" src={LinkedIn} />
             </a>
-            <a href={"mailto:soheum@naver.com?body=Hello! Let's grab a coffee"}>
-            <img class="w-[1.25rem] h-[1.25rem] object-contain cursor-pointer" src={Email} />
+            <a href={"mailto:sohheum@gmail.com?body=Hello! Let's grab a coffee"}>
+            <img class="w-[1.25rem] h-[1.25rem] mr-2 object-contain cursor-pointer" src={Email} />
+            </a>
+            <a href={"https://www.youtube.com/@sohmnm"}>
+            <img class="w-[1.25rem] h-[1.25rem] object-contain cursor-pointer" src={Youtube} />
             </a>
         </div>
       </div>

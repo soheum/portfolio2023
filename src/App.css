@@ -21,6 +21,10 @@
   vertical-align: top;
 }
 
+.videomask{
+  border-radius: 12px;
+  overflow: hidden;
+}
 .text-light-grey {
   color: rgb(163 163 163);
 }

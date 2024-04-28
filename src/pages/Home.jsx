@@ -10,7 +10,8 @@ var AiLanding = require('../assets/Ai_landing.png');
 var JoulLanding = require('../assets/Joul_landing.png');
 var Insta = require('../assets/logo-instagram.png');
 var Email = require('../assets/at-sign@3x.png');
-var LinkedIn = require('../assets/logo-linkedin.png')
+var LinkedIn = require('../assets/logo-linkedin.png');
+var Youtube = require('../assets/youtube_icon.png');
 var Aboutme_1 = require('../assets/aboutme_1.png');
 var Aboutme_2 = require('../assets/aboutme_2.png');
 var Aboutme_3 = require('../assets/aboutme_3.png');
@@ -40,7 +41,7 @@ const Home = () => (
         </div>
 
         <div className={`${styles.boxWidth} + mt-6`}>
-        <Link to ="/aboutme" target="_blank" rel="noreferrer">
+        <Link to ="/aboutme" rel="noreferrer">
             <body1 className={`${styles.body1} + text-light-grey`}>💬  more about me</body1>
         </Link>
         </div>
@@ -50,21 +51,21 @@ const Home = () => (
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
             <div className={`work-left mr-2`}>
-                {/* <Link to ="/fido" target="_blank" rel="noreferrer"> */}
+                <Link to ="/kan" rel="noreferrer">
                     <img class="rounded-xl mb-2" src={KanLanding} alt="Kan" />
-                {/* </Link> */}
+                </Link>
                 <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Digital business building at McKinsey</paragraph>
+                <paragraph className={`${styles.link}`}>Business building project at McKinsey</paragraph>
 
             </div>
             <div className={`work-right ml-2`}>
                 {/* <a href="https://awards.ixda.org/projects/fido-enhancing-trust-between-driver-and-ai-system-in-semi-autonomous-vehicles"target="_blank" rel="noopener noreferrer"> */}
-                <Link to ="/fido" target="_blank" rel="noreferrer">
+                <Link to ="/fido" rel="noreferrer">
                     <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" />
                 {/* </a> */}
                 </Link>
                 <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
-                <paragraph className={`${styles.link}`}>IxDDA 2023 Winner in Disuprting</paragraph>
+                <paragraph className={`${styles.link}`}>IxDA 2023 Winner in Disuprting</paragraph>
             </div> 
         </div>
 
@@ -77,10 +78,10 @@ const Home = () => (
                     <img class="rounded-xl mb-2" src={AiLanding} alt="Fido" />
                 {/* </a> */}
                 <paragraph className={`${styles.paragraph}`}>Human-centered thinking in AI</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Work at Mckinsey</paragraph>
+                <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info</paragraph>
             </div> 
             <div className={`work-left mr-2`}>
-                <a href="https://soheum.github.io/kureate/" target="_blank" rel="noopener noreferrer">
+                <a href="https://soheum.github.io/kureate/" rel="noopener noreferrer">
                     <img class="rounded-xl mb-2" src={CureateLanding} alt="Fido" />
                 </a>
                 <paragraph className={`${styles.paragraph}`}>Curate + Create, personal visual lens</paragraph> <br />
@@ -136,8 +137,11 @@ const Home = () => (
             <a href={"https://www.linkedin.com/in/so-heum-hwang/"}>
             <img class="w-[1.25rem] h-[1.25rem]  mr-2 object-contain cursor-pointer" src={LinkedIn} />
             </a>
-            <a href={"mailto:soheum@naver.com?body=Hello! Let's grab a coffee"}>
-            <img class="w-[1.25rem] h-[1.25rem] object-contain cursor-pointer" src={Email} />
+            <a href={"mailto:sohheum@gmail.com?body=Hello! Let's grab a coffee"}>
+            <img class="w-[1.25rem] h-[1.25rem] mr-2 object-contain cursor-pointer" src={Email} />
+            </a>
+            <a href={"https://www.youtube.com/@sohmnm"}>
+            <img class="w-[1.25rem] h-[1.25rem] object-contain cursor-pointer" src={Youtube} />
             </a>
             
             
