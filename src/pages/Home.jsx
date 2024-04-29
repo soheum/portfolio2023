@@ -5,6 +5,7 @@ import { Routes, Route, NavLink, Link } from 'react-router-dom';
 var FidoLanding = require('../assets/Fido_landing.png');
 var FidoLanding2 = require('../assets/Fido_landing2.png');
 var KanLanding = require('../assets/Kan_landing.png');
+var KanLanding2 = require('../assets/Kan_landing2.png');
 var CureateLanding = require('../assets/Cureate_landing.png');
 var AiLanding = require('../assets/Ai_landing.png');
 var JoulLanding = require('../assets/Joul_landing.png');
@@ -52,17 +53,15 @@ const Home = () => (
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
             <div className={`work-left mr-2`}>
                 <Link to ="/kan" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={KanLanding} alt="Kan" />
+                    <img class="rounded-xl mb-2" src={KanLanding} alt="Kan" onMouseOver={e => (e.currentTarget.src = KanLanding2)} onMouseOut={e => (e.currentTarget.src = KanLanding )}/>
                 </Link>
                 <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Business building project at McKinsey</paragraph>
 
             </div>
             <div className={`work-right ml-2`}>
-                {/* <a href="https://awards.ixda.org/projects/fido-enhancing-trust-between-driver-and-ai-system-in-semi-autonomous-vehicles"target="_blank" rel="noopener noreferrer"> */}
                 <Link to ="/fido" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" />
-                {/* </a> */}
+                    <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" onMouseOver={e => (e.currentTarget.src = FidoLanding2)} onMouseOut={e => (e.currentTarget.src = FidoLanding )} />
                 </Link>
                 <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
                 <paragraph className={`${styles.link}`}>IxDA 2023 Winner in Disuprting</paragraph>
@@ -74,9 +73,7 @@ const Home = () => (
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
              <div className={`work-right mr-4`}>
-                {/* <a href="https://apps.apple.com/be/app/emptymyfridge-recipe-by-food/id1550812530" target="_blank" rel="noopener noreferrer"> */}
-                    <img class="rounded-xl mb-2" src={AiLanding} alt="Fido" />
-                {/* </a> */}
+                <img class="rounded-xl mb-2" src={AiLanding} alt="Fido" />
                 <paragraph className={`${styles.paragraph}`}>Human-centered thinking in AI</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info</paragraph>
             </div> 
