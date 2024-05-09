@@ -6,8 +6,10 @@ var FidoLanding = require('../assets/Fido_landing.png');
 var FidoLanding2 = require('../assets/Fido_landing2.png');
 var KanLanding = require('../assets/Kan_landing.png');
 var KanLanding2 = require('../assets/Kan_landing2.png');
-var CureateLanding = require('../assets/Cureate_landing.png');
+var McKLanding = require('../assets/McK_landing.png');
+var McKLanding2 = require('../assets/McK_landing_2.png');
 var AiLanding = require('../assets/Ai_landing.png');
+var AiLanding2 = require('../assets/Ai_landing_2.png');
 var JoulLanding = require('../assets/Joul_landing.png');
 var Insta = require('../assets/logo-instagram.png');
 var Email = require('../assets/at-sign@3x.png');
@@ -64,7 +66,7 @@ const Home = () => (
                     <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" onMouseOver={e => (e.currentTarget.src = FidoLanding2)} onMouseOut={e => (e.currentTarget.src = FidoLanding )} />
                 </Link>
                 <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
-                <paragraph className={`${styles.link}`}>IxDA 2023 Winner in Disuprting</paragraph>
+                <paragraph className={`${styles.link}`}>IxDA 2023 Winner in Disrupting | Sponsored by Volvo Cars</paragraph>
             </div> 
         </div>
 
@@ -72,17 +74,19 @@ const Home = () => (
             <h2 className={`${styles.heading2}`}>Recent works</h2> 
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
+            <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}>
              <div className={`work-right mr-4`}>
-                <img class="rounded-xl mb-2" src={AiLanding} alt="Fido" />
+                <img class="rounded-xl mb-2" src={AiLanding} alt="HCAI" onMouseOver={e => (e.currentTarget.src = AiLanding)} onMouseOut={e => (e.currentTarget.src = AiLanding2 )}/>
                 <paragraph className={`${styles.paragraph}`}>Human-centered thinking in AI</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info</paragraph>
+                <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info!</paragraph>
             </div> 
+            </a>
             <div className={`work-left mr-2`}>
-                <a href="https://soheum.github.io/kureate/" rel="noopener noreferrer">
-                    <img class="rounded-xl mb-2" src={CureateLanding} alt="Fido" />
+                <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}>
+                    <img class="rounded-xl mb-2" src={McKLanding2} alt="McKinseywork" onMouseOver={e => (e.currentTarget.src = McKLanding)} onMouseOut={e => (e.currentTarget.src = McKLanding2 )}/>
                 </a>
-                <paragraph className={`${styles.paragraph}`}>Curate + Create, personal visual lens</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Personal project</paragraph>
+                <paragraph className={`${styles.paragraph}`}>Client projects at McKinsey</paragraph> <br />
+                <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info!</paragraph>
             </div>
 
             <div className={`work-right ml-2`}>
