@@ -1,5 +1,7 @@
 import styles, { layout } from '../style';
 import React from 'react';
+import '../App.css';
+import { useRef } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 var Aboutme_1 = require('../assets/aboutme_1.png');
 var Aboutme_2 = require('../assets/aboutme_2.png');
@@ -10,8 +12,16 @@ var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png');
 var Youtube = require('../assets/youtube_icon.png');
 
-const Aboutme = () => (
-    <section className="w-full flex justify-start items-start overflow-hidden">
+const Aboutme = () => {
+    const cursor2 = useRef(null)
+    const changePosition = (e) => {
+        cursor2.current.style.top = `${e.clientY}px`;
+        cursor2.current.style.left = `${e.clientX}px`;
+    }
+    return (
+    <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
+        <div className="cursor-style2" ref={cursor2} ></div>
+
     <div className="flex-1 flex-col">
       <div className="semi-title">
         <div className={`${styles.boxWidth}`}>
@@ -102,6 +112,7 @@ const Aboutme = () => (
      
     </div>
     </section>
-)
+    )
+}
 
 export default Aboutme

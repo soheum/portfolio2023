@@ -56,3 +56,87 @@
 .tm-medium{
   margin-top: 4rem;
 }
+
+* {
+  cursor: none;
+}
+.cursor-style {
+  background-color: #1E5CFF;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 100%;
+  transform-origin: 100% 100%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  pointer-events: none;
+}
+.cursor-style2 {
+  background-color: #1E5CFF;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 100%;
+  transform-origin: 100% 100%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  pointer-events: none;
+}
+.cursor-style-fido {
+  background-color: #9D28A9;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 100%;
+  transform-origin: 100% 100%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  pointer-events: none;
+}
+.cursor-style-kan {
+  background-color: #FD983B;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 100%;
+  transform-origin: 100% 100%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  pointer-events: none;
+}
+
+.cursor-style.kan-hovered {
+  background-color: #FD983B;
+  height: 1.3rem;
+  width: 1.3rem;
+  animation: blink 0.2s ease-out;
+}
+
+.cursor-style.fido-hovered {
+  background-color: #9D28A9;
+  height: 1.3rem;
+  width: 1.3rem;
+  animation: blink 0.2s ease-out;
+}
+
+.cursor-style.joul-hovered {
+  background-color: #F78B6F;
+  height: 1.3rem;
+  width: 1.3rem;
+  animation: blink 0.2s ease-out;
+}
+
+.cursor-style.me-hovered {
+  height: 1.3rem;
+  width: 1.3rem;
+  animation: blink 0.2s ease-out;
+  opacity: 0.8;
+}
+
+@keyframes blink {
+  0% {
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+  
+  100% {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+}

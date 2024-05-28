@@ -1,16 +1,20 @@
 import styles, { layout } from '../style';
 import React from 'react';
+import { useState, useRef } from 'react';
 import '../App.css';
 import { Routes, Route, NavLink, Link } from 'react-router-dom';
+import CustomCursor from "./CustomCursor";
 var FidoLanding = require('../assets/Fido_landing.png');
 var FidoLanding2 = require('../assets/Fido_landing2.png');
 var KanLanding = require('../assets/Kan_landing.png');
 var KanLanding2 = require('../assets/Kan_landing2.png');
 var McKLanding = require('../assets/McK_landing.png');
 var McKLanding2 = require('../assets/McK_landing_2.png');
+var DataLanding = require('../assets/Data_landing.png');
 var AiLanding = require('../assets/Ai_landing.png');
 var AiLanding2 = require('../assets/Ai_landing_2.png');
 var JoulLanding = require('../assets/Joul_landing.png');
+var JoulLanding2 = require('../assets/Joul_landing2.png');
 var Insta = require('../assets/logo-instagram.png');
 var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png');
@@ -20,8 +24,25 @@ var Aboutme_2 = require('../assets/aboutme_2.png');
 var Aboutme_3 = require('../assets/aboutme_3.png');
 var Aboutme_4 = require('../assets/aboutme_4.png');
 
-const Home = () => (
-    <section className="w-full flex justify-start items-start overflow-hidden">
+const Home = () => {
+    const cursor = useRef(null)
+    const changePosition = (e) => {
+        cursor.current.style.top = `${e.clientY}px`;
+        cursor.current.style.left = `${e.clientX}px`;
+    }
+
+    const [isKanHovered, setIsKanHovered] = useState(false);
+    const [isFidoHovered, setIsFidoHovered] = useState(false);
+    const [isJoulHovered, setIsJoulHovered] = useState(false);
+    const [isMeHovered, setIsMeHovered] = useState(false);
+    
+    return(
+    <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
+    <div
+        className={`cursor-style ${isKanHovered ? 'kan-hovered' : ''} ${isFidoHovered ? 'fido-hovered' : ''} ${isJoulHovered ? 'joul-hovered' : ''}
+        ${isMeHovered ? 'me-hovered' : ''}`}
+        ref={cursor}
+      ></div>
     <div className="flex-1 flex-col">
       <div className="semi-title">
         <div className={`${styles.boxWidth}`}>
@@ -45,7 +66,10 @@ const Home = () => (
 
         <div className={`${styles.boxWidth} + mt-6`}>
         <Link to ="/aboutme" rel="noreferrer">
-            <body1 className={`${styles.body1} + text-light-grey`}>💬  more about me</body1>
+            <body1 className={`${styles.body1} + text-light-grey + me`}
+            onMouseEnter={() => setIsMeHovered(true)}
+            onMouseLeave={() => setIsMeHovered(false)}
+            >💬  more about me</body1>
         </Link>
         </div>
 
@@ -53,9 +77,17 @@ const Home = () => (
             <h2 className={`${styles.heading2}`}>Selected works</h2> 
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
-            <div className={`work-left mr-2`}>
+            <div className={`work-left mr-2`} >
                 <Link to ="/kan" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={KanLanding} alt="Kan" onMouseOver={e => (e.currentTarget.src = KanLanding2)} onMouseOut={e => (e.currentTarget.src = KanLanding )}/>
+                    <img 
+                        class="rounded-xl mb-2 kan-cursor" 
+                        src={ KanLanding2}
+                        alt="Kan" 
+                        onMouseEnter={(e) => {setIsKanHovered(true);
+                        e.currentTarget.src = KanLanding; }}
+                        onMouseLeave={(e) => {setIsKanHovered(false);
+                        e.currentTarget.src = KanLanding2; }}
+                    />
                 </Link>
                 <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Business building project at McKinsey</paragraph>
@@ -63,7 +95,14 @@ const Home = () => (
             </div>
             <div className={`work-right ml-2`}>
                 <Link to ="/fido" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={FidoLanding} alt="Fido" onMouseOver={e => (e.currentTarget.src = FidoLanding2)} onMouseOut={e => (e.currentTarget.src = FidoLanding )} />
+                    <img class="rounded-xl mb-2 fido-cursor" 
+                    src={ FidoLanding }
+                    alt="Fido" 
+                    onMouseEnter={(e) => {setIsFidoHovered(true);
+                    e.currentTarget.src = FidoLanding2; }}
+                    onMouseLeave={(e) => {setIsFidoHovered(false);
+                    e.currentTarget.src = FidoLanding; }} 
+                    />
                 </Link>
                 <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
                 <paragraph className={`${styles.link}`}>IxDA 2023 Winner in Disrupting | Sponsored by Volvo Cars</paragraph>
@@ -74,56 +113,34 @@ const Home = () => (
             <h2 className={`${styles.heading2}`}>Recent works</h2> 
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
+            <div className={`work-left mr-2`}>
+                <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}>
+                    <img class="rounded-xl mb-2" src={DataLanding} alt="McKinseywork" onMouseOver={e => (e.currentTarget.src = DataLanding)} onMouseOut={e => (e.currentTarget.src = DataLanding )}/>
+                </a>
+                <paragraph className={`${styles.paragraph}`}>Data-centric design process</paragraph><br />
+                <paragraph className={`${styles.link}`}>WIP Personal Exploration - Figma plugin</paragraph>
+            </div>
             <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}>
              <div className={`work-right mr-4`}>
                 <img class="rounded-xl mb-2" src={AiLanding} alt="HCAI" onMouseOver={e => (e.currentTarget.src = AiLanding)} onMouseOut={e => (e.currentTarget.src = AiLanding2 )}/>
-                <paragraph className={`${styles.paragraph}`}>Human-centered thinking in AI</paragraph> <br />
+                <paragraph className={`${styles.paragraph}`}>Human-centered thinking in AI </paragraph> <br />
                 <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info!</paragraph>
             </div> 
             </a>
-            <div className={`work-left mr-2`}>
-                <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}>
-                    <img class="rounded-xl mb-2" src={McKLanding2} alt="McKinseywork" onMouseOver={e => (e.currentTarget.src = McKLanding)} onMouseOut={e => (e.currentTarget.src = McKLanding2 )}/>
-                </a>
-                <paragraph className={`${styles.paragraph}`}>Client projects at McKinsey</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info!</paragraph>
-            </div>
+            
 
             <div className={`work-right ml-2`}>
                 <a href="https://designawards.core77.com/Interaction/95544/JOUL-exploring-sustainability-through-play" target="_blank" rel="noopener noreferrer">
-                    <img class="rounded-xl mb-2" src={JoulLanding} alt="Fido" />
+                    <img class="rounded-xl mb-2 joul-cursor" src={JoulLanding} alt="Fido" 
+                    onMouseEnter={(e) => {setIsJoulHovered(true);
+                        e.currentTarget.src = JoulLanding; }}
+                        onMouseLeave={(e) => {setIsJoulHovered(false);
+                        e.currentTarget.src = JoulLanding2; }}/>
                 </a>
                 <paragraph className={`${styles.paragraph}`}>Exploring sustainability through play</paragraph> <br />
                 <paragraph className={`${styles.link}`}>Core77 Student Runner Up 2020</paragraph>
             </div> 
         </div>
-
-        {/* <div className={`${styles.boxWidth} + mt-12`}>
-            <h2 className={`${styles.heading2}`}>About me</h2> 
-        </div>
-        <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
-            <div className={`aboutme mr-2`}>
-                <Link to ="/aboutme" target="_blank" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={Aboutme_1} alt="aboutme" />
-                </Link>
-            </div>
-            <div className={`aboutme mr-2`}>
-                <Link to ="/aboutme" target="_blank" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={Aboutme_2} alt="aboutme" />
-                </Link>
-            </div> 
-            <div className={`aboutme mr-2`}>
-                <Link to ="/aboutme" target="_blank" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={Aboutme_3} alt="aboutme" />
-                </Link>
-            </div> 
-            <div className={`aboutme mr-2`}>
-                <Link to ="/aboutme" target="_blank" rel="noreferrer">
-                    <img class="rounded-xl mb-2" src={Aboutme_4} alt="aboutme" />
-                </Link>
-            </div> 
-        </div> */}
-
     
       </div>
 
@@ -150,7 +167,7 @@ const Home = () => (
       </div>
     </div>
   </section>
-
-)
+    )
+    }
 
 export default Home

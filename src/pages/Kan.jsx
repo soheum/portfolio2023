@@ -1,6 +1,7 @@
 import styles, { layout } from '../style';
 import { Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
+import { useRef } from 'react';
 import Kanvideo from '../assets/Kan-recordings.mp4';
 import Kanvideo2 from '../assets/Kan_website_mockup.mp4';
 var KanTitle = require('../assets/Kan_title.png');
@@ -17,8 +18,15 @@ var Insta = require('../assets/logo-instagram.png');
 var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png')
 
-const Kan = () => (
-    <section className="w-full flex justify-start items-start overflow-hidden">
+const Kan = () => {
+    const cursor2 = useRef(null)
+    const changePosition = (e) => {
+        cursor2.current.style.top = `${e.clientY}px`;
+        cursor2.current.style.left = `${e.clientX}px`;
+    }
+    return(
+    <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
+    <div className="cursor-style-kan" ref={cursor2} ></div>
     <div className="flex-1 flex-col">
       <div className="semi-title">
         <div className={`${styles.boxWidth}`}>
@@ -140,5 +148,5 @@ const Kan = () => (
     
     </section>
 )
-
+}
 export default Kan

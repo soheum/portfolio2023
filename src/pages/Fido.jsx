@@ -1,6 +1,7 @@
 import styles, { layout } from '../style';
 import { Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
+import { useRef } from 'react';
 var FidoTitle = require('../assets/Fido_title.png');
 var Fido01 = require('../assets/Fido_01.png');
 var Fido02 = require('../assets/Fido_02.png');
@@ -22,8 +23,15 @@ var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png');
 var Youtube = require('../assets/youtube_icon.png');
 
-const Fido = () => (
-    <section className="w-full flex justify-start items-start overflow-hidden">
+const Fido = () => {
+    const cursor2 = useRef(null)
+    const changePosition = (e) => {
+        cursor2.current.style.top = `${e.clientY}px`;
+        cursor2.current.style.left = `${e.clientX}px`;
+    }
+    return(
+    <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
+    <div className="cursor-style-fido" ref={cursor2} ></div>
     <div className="flex-1 flex-col">
       <div className="semi-title">
         <div className={`${styles.boxWidth}`}>
@@ -185,6 +193,7 @@ const Fido = () => (
 
     
     </section>
-)
+    )
+}
 
 export default Fido

@@ -1,0 +1,28 @@
+/* body {
+    cursor: none;
+}
+
+.image-cursor {
+  cursor: none;
+} */
+
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    /* width: 12px;
+    height: 12px; */
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  
+  .custom-cursor-trail {
+    position: fixed;
+    pointer-events: none;
+    width: 12px;
+    height: 12px;
+    background-size: cover;
+    /* transform: translate(-50%, -50%); */
+    z-index: 9998;
+    transition: opacity 1s;
+  }
