@@ -56,7 +56,10 @@ const Kan = () => {
             <body1 className={`${styles.body1}`}>What is Kan?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}>Kan is an employee benefit in Norway focused on financial health. With Kan’s mobile app, employees can take better control of their finances through budget planning, debt management, refinancing and advisor sessions. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>Kan is an </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>employee benefit in Norway focused on financial health.</paragraph>
+            <paragraph className={`${styles.paragraph}`}> With Kan’s mobile app, employees can take better control of their finances through </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>budget planning, debt management, refinancing and advisor sessions. </paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Kan01} alt="Kan01" />
@@ -71,14 +74,22 @@ const Kan = () => {
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br />Mobile app - Spend Overview feature, <br /></paragraph>
-            <paragraph className={`${styles.paragraph}`}>I was responsible for the Spend Overview feature, which helps users to manage their monthly expenses. This enables users to set budgets, categorize transactions and monitor their total savings and debt effectively. Different categories were sourced through an integration with Tink, an open banking platform.</paragraph>
+            <paragraph className={`${styles.paragraph}`}>I was responsible for the Spend Overview feature, which helps users to </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>manage their monthly expenses. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>This enables users to </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>set budgets, categorize transactions and monitor their total savings and debt effectively.</paragraph>
+            <paragraph className={`${styles.paragraph}`}> Different categories were sourced through an integration with Tink, an open banking platform.</paragraph>
         </div>
         <div className="img-title mt-16 videomask">
             <video src={Kanvideo2} autoPlay muted loop />
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br />Kan.no website <br /></paragraph>
-            <paragraph className={`${styles.paragraph}`}>Kan’s website is the primary interface for both employers and employees, as users were directed to this page from sales materials like flyers or posters. Since this was crucial for generating sales leads, the website had to effectively communicate Kan’s value proposition to employers and convince them to use Kan.</paragraph>
+            <paragraph className={`${styles.paragraph}`}>Kan’s website is the primary interface for both </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>employers and employees, </paragraph>
+            <paragraph className={`${styles.paragraph}`}>as users were directed to this page from sales materials like flyers or posters. Since this was crucial for generating sales leads, the website had to </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>effectively communicate Kan’s value proposition</paragraph>
+            <paragraph className={`${styles.paragraph}`}> to employers and convince them to use Kan.</paragraph>
         </div>
         <div className={`${styles.boxWidth} + mt-6`}>
         <a href="https://kan.no/" target="_blank">
@@ -95,15 +106,29 @@ const Kan = () => {
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br />Mobile app - Spend Overview feature, <br /></paragraph>
-            <paragraph className={`${styles.paragraph}`}>I began by conducting qualitative user interviews with both current and prospective Kan users to identify their needs. Then I collaborated with the Product and Development team to outline the scope for each sprint, considering factors like time, development resources and third-party integrations like Tink. Working closely with developers, I designed and refined the features, establishing data visualization guidelines and defining the logic for insight cards. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>I began by conducting </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>qualitative user interviews </paragraph>
+            <paragraph className={`${styles.paragraph}`}>with both current and prospective Kan users to identify their needs. Then I collaborated with the Product and Development team to </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>outline the scope for each sprint, </paragraph>
+            <paragraph className={`${styles.paragraph}`}>considering factors like time, development resources and third-party integrations like Tink. </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>Working closely with developers,</paragraph>
+            <paragraph className={`${styles.paragraph}`}> I designed and refined the features, establishing data visualization guidelines and defining the logic for insight cards. </paragraph>
         </div>
         <div className="img-title mt-16">
             <img class="rounded-xl mt-8" src={Kan03_2} alt="Kan01" />
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br />Kan.no website <br /></paragraph>
-            <paragraph className={`${styles.paragraph}`}>In developing Kan's website, I combined qualitative interviews with employers and employees with quantitative Hotjar data to understand user’s perceptions and expectations of Kan. Market research helped me identify common patterns that were used in competitors that provide employee benefits. 
-<br />Leveraging this, I tailored the website to serve both users - employees and employers. For employers, Kan’s potential impact and the benefits it will bring to the company were emphasized, whereas for employees, specific features of Kan were explained in detail.  </paragraph>
+            <paragraph className={`${styles.paragraph}`}>In developing Kan's website, I combined </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>qualitative interviews </paragraph>
+            <paragraph className={`${styles.paragraph}`}>with employers and employees with </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>quantitative Hotjar data </paragraph>
+            <paragraph className={`${styles.paragraph}`}>to understand user’s perceptions and expectations of Kan. </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>Market research </paragraph>
+            <paragraph className={`${styles.paragraph}`}>helped me identify common patterns that were used in competitors that provide employee benefits. 
+<br />Leveraging this, I tailored the website to serve </paragraph>
+<paragraph className={`${styles.paragraph2}`}>both users - employees and employers. </paragraph>
+<paragraph className={`${styles.paragraph}`}>For employers, Kan’s potential impact and the benefits it will bring to the company were emphasized, whereas for employees, specific features of Kan were explained in detail.  </paragraph>
         </div>
         
         
@@ -117,13 +142,25 @@ const Kan = () => {
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br />Speaking different languages, but with a same goal in mind<br /></paragraph>
-            <paragraph className={`${styles.paragraph}`}>The perks of working in a product-focused team is the engagement with teams that have diverse perspectives across disciplines. In my experience, designers prioritize visuals and users, product team focus on business goals and developers emphatize practicality and implementation. Despite these differences, all teams share a common objective: driving growth. 
-<br />Collaborating with individuals from various backgrounds challenged me to think creatively and broaden my perspective. It taught me effective communication and methods on pursuing user-centric values when necessary. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>The perks of working in a product-focused team is the </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>engagement with teams that have diverse perspectives across disciplines.</paragraph>
+            <paragraph className={`${styles.paragraph}`}> In my experience, designers prioritize visuals and users, product team focus on business goals and developers emphatize practicality and implementation. Despite these differences, all teams share a common objective: driving growth. 
+<br />Collaborating with individuals from various backgrounds challenged me to </paragraph>
+<paragraph className={`${styles.paragraph2}`}>think creatively and broaden my perspective. </paragraph>
+<paragraph className={`${styles.paragraph}`}>It taught me </paragraph>
+<paragraph className={`${styles.paragraph2}`}>effective communication </paragraph>
+<paragraph className={`${styles.paragraph}`}>and methods on </paragraph>
+<paragraph className={`${styles.paragraph2}`}>pursuing user-centric values </paragraph>
+<paragraph className={`${styles.paragraph}`}>when necessary. </paragraph>
         </div>
         <div className="sub-content mt-8 w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br />Focus on essentials when showing data to consumers<br /></paragraph>
-            <paragraph className={`${styles.paragraph}`}>As a financial service, Kan used different visualisation techniques, such as pie graphs, to present transactional data. Contrary to dashboards for B2B users, I learned the significance of simplifying visuals for consumer-facing services by highlighting essentials and eliminating additional details. 
-<br />To prioritize the core of the data, I experimented with different methods of surfacing insights sand representing them visually. This process of translating and extracting user-centered values from numerical data aligned with my personal values of a product designer. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>As a financial service, Kan used different visualisation techniques, such as pie graphs, to present transactional data. Contrary to dashboards for B2B users, I learned the </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>significance of simplifying visuals for consumer-facing services</paragraph>
+            <paragraph className={`${styles.paragraph}`}> by highlighting essentials and eliminating additional details. 
+<br />To prioritize the core of the data, I experimented with different methods of surfacing insights and representing them visually. This process of </paragraph>
+<paragraph className={`${styles.paragraph2}`}>translating and extracting user-centered values from numerical data </paragraph>
+<paragraph className={`${styles.paragraph}`}>aligned with my personal values of a product designer. </paragraph>
         </div>
      </div>
      

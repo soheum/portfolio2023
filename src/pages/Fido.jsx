@@ -61,7 +61,11 @@ const Fido = () => {
             <body1 className={`${styles.body1}`}>Why is trust so important?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}>Despite the growing number of drivers concerned about autonomous vehicle technology, fully autonomous vehicles are continually being developed primarily from a technical perspective. What is lacking in this field is a human-centered perspective that emphasizes how users feel and perceive the technology.</paragraph>
+            <paragraph className={`${styles.paragraph}`}>Despite the growing number of drivers concerned about autonomous vehicle technology, fully autonomous vehicles are continually being developed </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>primarily from a technical perspective. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>What is lacking in this field is a </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>human-centered perspective </paragraph>
+            <paragraph className={`${styles.paragraph}`}>that emphasizes how users feel and perceive the technology.</paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Fido01} alt="Fido01" />
@@ -72,13 +76,20 @@ const Fido = () => {
             <body1 className={`${styles.body1}`}>How does FiDO build trust?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}>FiDO collects data from the driver, offers recommendations, and enhances itself based on received feedback. Drivers can physically rotate the device to provide either positive or negative feedback, allowing FiDO to learn and refine its algorithm.</paragraph>
+            <paragraph className={`${styles.paragraph}`}>FiDO collects data from the driver, offers recommendations, and enhances itself based on received feedback. Drivers can </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>physically rotate the device</paragraph>
+            <paragraph className={`${styles.paragraph}`}> to provide either positive or negative feedback, allowing FiDO to </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>learn and refine its algorithm.</paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Fido02} alt="Fido01" />
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}><br /><br />Furthermore, FiDO assists in enhancing the vehicle's autonomous driving algorithm by collecting additional data in collaboration with the driver. FiDO is utilized in vehicles ranging from conditional to full automation, and, based on the driver's trust level, the driver and FiDO work together to develop a fully autonomous vehicle.</paragraph>
+            <paragraph className={`${styles.paragraph}`}><br /><br />Furthermore, FiDO assists in </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>enhancing the vehicle's autonomous driving algorithm </paragraph>
+            <paragraph className={`${styles.paragraph}`}>by collecting additional data in collaboration with the driver. FiDO is utilized in vehicles ranging from conditional to full automation, and, based on the driver's trust level, </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>the driver and FiDO work together </paragraph>
+            <paragraph className={`${styles.paragraph}`}>to develop a fully autonomous vehicle.</paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Fido022} alt="Fido01" />
@@ -90,7 +101,9 @@ const Fido = () => {
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}>FiDO is honest, </paragraph>
-            <paragraph className={`${styles.paragraph}`}><br/>visually representing the operation of the vehicle's AI algorithm through color gradients. A digital screen positioned on top of FiDO displays these visual color gradients. FiDO appears gray when collecting data, transitions to a blend of blue and purple while providing recommendations to the driver, and, when the driver rotates it, displays purple for positive feedback and blue for negative feedback.</paragraph>
+            <paragraph className={`${styles.paragraph}`}><br/>visually representing the </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>operation of the vehicle's AI algorithm through color gradients. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>A digital screen positioned on top of FiDO displays these visual color gradients. <br /> FiDO appears gray when collecting data, transitions to a blend of blue and purple while providing recommendations to the driver, and, when the driver rotates it, displays purple for positive feedback and blue for negative feedback.</paragraph>
         </div>
         <div className="img-title flex gap-2.5">
             <img class="rounded-xl mt-8 w-4/12" src={Fido03_1} alt="Fido01" />
@@ -99,7 +112,13 @@ const Fido = () => {
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br /> <br />FiDO is graspable,</paragraph>
-            <paragraph className={`${styles.paragraph}`}><br/> the physical act of rotating FiDO after receiving a recommendation strengthens the user's connection to the otherwise abstract and intangible AI algorithm. Unlike voice interfaces and digital screens that other automobile companies are prioritizing, this project is driven by the results of user tests, which have indicated a strong preference for physical buttons in future automobiles.</paragraph>
+            <paragraph className={`${styles.paragraph}`}><br/> the physical act of </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>rotating FiDO after receiving a recommendation </paragraph>
+            <paragraph className={`${styles.paragraph}`}>strengthens the user's connection to the otherwise</paragraph>
+            <paragraph className={`${styles.paragraph2}`}> abstract and intangible AI algorithm. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>Unlike voice interfaces and digital screens that other automobile companies are prioritizing, this project is driven by the results of user tests, which have indicated a </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>strong preference for physical buttons</paragraph>
+            <paragraph className={`${styles.paragraph}`}> in future automobiles.</paragraph>
         </div>
         <div className="img-title flex gap-2.5">
             <img class="rounded-xl mt-8 w-8/12" src={Fido03_4} alt="Fido01" />
@@ -107,7 +126,11 @@ const Fido = () => {
         </div>
         <div className="sub-content w-8/12">
             <paragraph className={`${styles.paragraph2}`}><br /> <br />FiDO is creates human intuition,</paragraph>
-            <paragraph className={`${styles.paragraph}`}><br/> particularly through the 'Dialogue Sphere' featured in its app. The app visually represents the relationship between FiDO and the driver using color gradients. If the driver frequently rotates FiDO to the right, the sphere displays more purple gradients; conversely, it shows more blue gradients when rotated to the left. This poetic representation lays the foundation for drivers to develop a sense of human intuition, enabling them to establish a connection and intuitive understanding of the vehicle.</paragraph>
+            <paragraph className={`${styles.paragraph}`}><br/> particularly through the 'Dialogue Sphere' featured in its app. The app </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>visually represents the relationship between FiDO and the driver using color gradients. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>If the driver frequently rotates FiDO to the right, the sphere displays more purple gradients; conversely, it shows more blue gradients when rotated to the left. This </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>poetic representation lays the foundation for drivers to develop a sense of human intuition,</paragraph>
+            <paragraph className={`${styles.paragraph}`}> enabling them to establish a connection and intuitive understanding of the vehicle.</paragraph>
         </div>
         <div className="img-title flex gap-2.5">
             <img class="rounded-xl mt-8" src={Fido03_6} alt="Fido01" />
@@ -118,7 +141,9 @@ const Fido = () => {
             <body1 className={`${styles.body1}`}>Then, how did you conduct research?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}>Three different research methodologies—participatory design, analogy methods, and expert interaction—were employed to address two main questions. These methodologies prioritize understanding how users perceive automation technology, enable them to envision a fully autonomous vehicle using various analogies, and provide insights into the mobility industry through interactions with Volvo Cars experts.</paragraph>
+            <paragraph className={`${styles.paragraph}`}>Three different research methodologies—</paragraph>
+            <paragraph className={`${styles.paragraph2}`}>participatory design, analogy methods, and expert interaction—</paragraph>
+            <paragraph className={`${styles.paragraph}`}>were employed to address two main questions. These methodologies prioritize understanding how users perceive automation technology, enable them to envision a fully autonomous vehicle using various analogies, and provide insights into the mobility industry through interactions with Volvo Cars experts.</paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Fido04} alt="Fido01" />
@@ -129,7 +154,9 @@ const Fido = () => {
             <body1 className={`${styles.body1}`}>What were the results of the research?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}>After the research phase, I formulated my personal definition of trust, which served as a metric to assess trust within this project.</paragraph>
+            <paragraph className={`${styles.paragraph}`}>After the research phase, I formulated </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>my personal definition of trust, </paragraph>
+            <paragraph className={`${styles.paragraph}`}>which served as a metric to assess trust within this project.</paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Fido05} alt="Fido01" />
@@ -140,19 +167,28 @@ const Fido = () => {
             <body1 className={`${styles.body1}`}>How did you include users during the research?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}>Workshops enabled the project to explore participants' perceptions of autonomous vehicles, brainstorm ideas, and validate various concepts through an iterative process. <br /><br /> “Trust Decks” consolidated research findings defining six qualities necessary for trust between a user and an object. To emphasize trust with an object, the movie character Baymax from Big Hero 6 served as an analogy to an autonomous vehicle. These decks were subsequently utilized as props in various workshops</paragraph>
+            <paragraph className={`${styles.paragraph}`}>Workshops enabled the project to explore participants' perceptions of autonomous vehicles, brainstorm ideas, and validate various concepts through an iterative process. <br /><br /> </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>“Trust Decks”</paragraph>
+            <paragraph className={`${styles.paragraph}`}> consolidated research findings defining six qualities necessary for trust between a user and an object. To emphasize trust with an object, the movie character </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>Baymax from Big Hero 6 served as an analogy </paragraph>
+            <paragraph className={`${styles.paragraph}`}>to an autonomous vehicle. These decks were subsequently utilized as props in various workshops</paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Fido06} alt="Fido06" />
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}><br /> <br />Mobility experts from Volvo Cars were involved in the process, along with six participants from the UX design department who tested a low-fidelity paper prototype called the 'Trust Prop' in our office's prototyping rig. This prototype was developed based on a workshop I conducted with users and served as a guideline to encourage participants to think outside the box, reminding them that their designs and ideas don't always have to be strictly applicable or practical.</paragraph>
+            <paragraph className={`${styles.paragraph2}`}><br /> <br />Mobility experts from Volvo Cars </paragraph>
+            <paragraph className={`${styles.paragraph}`}>were involved in the process, along with six participants from the UX design department who tested a </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>low-fidelity paper prototype called the 'Trust Prop' </paragraph>
+            <paragraph className={`${styles.paragraph}`}>in Volvo Cars office's prototyping rig. This prototype was developed based on a workshop I conducted with users and served as a guideline to encourage participants to think outside the box, reminding them that their designs and ideas don't always have to be strictly applicable or practical.</paragraph>
         </div>
         <div className="img-title flex gap-2.5">
             <img class="rounded-xl mt-8" src={Fido06_2} alt="Fido01" />
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}><br /> <br />Finally, users participated in both ideation and validation stages. Workshops and user testing sessions offered genuine insights into users' perceptions of autonomous vehicles. Early-stage prototypes were tested inside a vehicle to validate two distinct concept directions, gauging the emotional connections that each concept fostered with users.</paragraph>
+            <paragraph className={`${styles.paragraph}`}><br /> <br />Finally, users participated in both ideation and validation stages. Workshops and user testing sessions offered </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>genuine insights into users' perceptions of autonomous vehicles. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>Early-stage prototypes were tested inside a vehicle to validate two distinct concept directions, gauging the emotional connections that each concept fostered with users.</paragraph>
         </div>
         <div className="img-title flex gap-2.5">
             <img class="rounded-xl mt-8" src={Fido06_3} alt="Fido01" />
@@ -163,8 +199,13 @@ const Fido = () => {
             <body1 className={`${styles.body1}`}>Lastly, what did you learn?<br /><br /></body1>
         </div>
         <div className="sub-content w-8/12">
-            <paragraph className={`${styles.paragraph}`}>Explainable AI clarifies how intelligent systems work and produce valid reasoning to enhance trust. This is mostly used by developers to improve AI performance rather than focusing on user experience. With FiDO, I explored making AI more understandable for end users by balancing feature transparency and interpretations. Translating AI functionality into user-friendly features was a key role of interaction design in the world of technology. <br/> <br/> 
-            Designing within a vehicle introduced complexity and prompted me to explore the aesthetics of the driving environment. Unlike mobile apps or websites, automotive human-machine interface design posed new challenges, including considerations of color contrast, text size, distance from the driver's seat, and cognitive load while driving. Additionally, accounting for future semi-autonomous driving settings prompted a re-evaluation of UI guidelines, encouraging a fresh perspective on design components.</paragraph>
+            <paragraph className={`${styles.paragraph}`}>Explainable AI clarifies how intelligent systems work and produce valid reasoning to enhance trust. This is mostly used by developers to improve AI performance rather than focusing on user experience. With FiDO, I explored </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>making AI more understandable for end users by balancing feature transparency and interpretations. </paragraph>
+            <paragraph className={`${styles.paragraph}`}>Translating AI functionality into user-friendly features was a key role of interaction design in the world of technology. <br/> <br/> </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>Designing within a vehicle </paragraph>
+            <paragraph className={`${styles.paragraph}`}>introduced complexity and prompted me to explore the aesthetics of the driving environment. Unlike mobile apps or websites, automotive human-machine interface design posed new challenges, including considerations of color contrast, text size, distance from the driver's seat, and cognitive load while driving. Additionally, accounting for </paragraph>
+            <paragraph className={`${styles.paragraph2}`}>future semi-autonomous driving settings </paragraph>
+            <paragraph className={`${styles.paragraph}`}>prompted a re-evaluation of UI guidelines, encouraging a fresh perspective on design components.</paragraph>
         </div>
         <div className="img-title">
             <img class="rounded-xl mt-8" src={Fido07} alt="Fido01" />

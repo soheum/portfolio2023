@@ -100,6 +100,17 @@
   position: fixed;
   pointer-events: none;
 }
+.cursor-style-hype {
+  background-color: #38D9B9;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 100%;
+  transform-origin: 100% 100%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  pointer-events: none;
+}
+
 
 .cursor-style.kan-hovered {
   background-color: #FD983B;
@@ -117,6 +128,13 @@
 
 .cursor-style.joul-hovered {
   background-color: #F78B6F;
+  height: 1.3rem;
+  width: 1.3rem;
+  animation: blink 0.2s ease-out;
+}
+
+.cursor-style.hype-hovered {
+  background-color: #38D9B9;
   height: 1.3rem;
   width: 1.3rem;
   animation: blink 0.2s ease-out;

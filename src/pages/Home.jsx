@@ -10,6 +10,8 @@ var KanLanding = require('../assets/Kan_landing.png');
 var KanLanding2 = require('../assets/Kan_landing2.png');
 var McKLanding = require('../assets/McK_landing.png');
 var McKLanding2 = require('../assets/McK_landing_2.png');
+var HypeLanding = require('../assets/Hype_landing.png');
+var HypeLanding2 = require('../assets/Hype_landing2.png');
 var DataLanding = require('../assets/Data_landing.png');
 var AiLanding = require('../assets/Ai_landing.png');
 var AiLanding2 = require('../assets/Ai_landing_2.png');
@@ -35,11 +37,12 @@ const Home = () => {
     const [isFidoHovered, setIsFidoHovered] = useState(false);
     const [isJoulHovered, setIsJoulHovered] = useState(false);
     const [isMeHovered, setIsMeHovered] = useState(false);
+    const [isHypeHovered, setIsHypeHovered] = useState(false);
     
     return(
     <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
     <div
-        className={`cursor-style ${isKanHovered ? 'kan-hovered' : ''} ${isFidoHovered ? 'fido-hovered' : ''} ${isJoulHovered ? 'joul-hovered' : ''}
+        className={`cursor-style ${isKanHovered ? 'kan-hovered' : ''} ${isFidoHovered ? 'fido-hovered' : ''} ${isJoulHovered ? 'joul-hovered' : ''} ${isHypeHovered ? 'hype-hovered' : ''}
         ${isMeHovered ? 'me-hovered' : ''}`}
         ref={cursor}
       ></div>
@@ -78,20 +81,19 @@ const Home = () => {
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
             <div className={`work-left mr-2`} >
-                <Link to ="/kan" rel="noreferrer">
+                <Link to ="/hyper" rel="noreferrer">
                     <img 
-                        class="rounded-xl mb-2 kan-cursor" 
-                        src={ KanLanding2}
+                        class="rounded-xl mb-2 hype-cursor" 
+                        src={ HypeLanding }
                         alt="Kan" 
-                        onMouseEnter={(e) => {setIsKanHovered(true);
-                        e.currentTarget.src = KanLanding; }}
-                        onMouseLeave={(e) => {setIsKanHovered(false);
-                        e.currentTarget.src = KanLanding2; }}
+                        onMouseEnter={(e) => {setIsHypeHovered(true);
+                        e.currentTarget.src = HypeLanding2; }}
+                        onMouseLeave={(e) => {setIsHypeHovered(false);
+                        e.currentTarget.src = HypeLanding; }}
                     />
                 </Link>
-                <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees</paragraph> <br />
-                <paragraph className={`${styles.link}`}>Business building project at McKinsey</paragraph>
-
+                <paragraph className={`${styles.paragraph}`}>Human-centred thinking in AI</paragraph> <br />
+                <paragraph className={`${styles.link}`}>Protected work at McKinsey - password mentioned in CV</paragraph>
             </div>
             <div className={`work-right ml-2`}>
                 <Link to ="/fido" rel="noreferrer">
@@ -113,26 +115,31 @@ const Home = () => {
             <h2 className={`${styles.heading2}`}>Recent works</h2> 
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
+            <Link to ="/kan" rel="noreferrer">
+             <div className={`work-right mr-4`}>
+                <img class="rounded-xl mb-2" src={KanLanding} alt="HCAI" 
+                    onMouseEnter={(e) => {setIsKanHovered(true);
+                    e.currentTarget.src = KanLanding; }}
+                    onMouseLeave={(e) => {setIsKanHovered(false);
+                    e.currentTarget.src = KanLanding2; }}/>
+                <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees </paragraph> <br />
+                <paragraph className={`${styles.link}`}>Business building project at McKinsey</paragraph>
+            </div> 
+            </Link>
+
             <div className={`work-left mr-2`}>
-                <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}>
+                {/* <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}> */}
                     <img class="rounded-xl mb-2" src={DataLanding} alt="McKinseywork" onMouseOver={e => (e.currentTarget.src = DataLanding)} onMouseOut={e => (e.currentTarget.src = DataLanding )}/>
-                </a>
+                {/* </a> */}
                 <paragraph className={`${styles.paragraph}`}>Data-centric design process</paragraph><br />
                 <paragraph className={`${styles.link}`}>WIP Personal Exploration - Figma plugin</paragraph>
             </div>
-            <a href={"mailto:soheum@naver.com?body=Hello! I want to know more about your work in McKinsey"}>
-             <div className={`work-right mr-4`}>
-                <img class="rounded-xl mb-2" src={AiLanding} alt="HCAI" onMouseOver={e => (e.currentTarget.src = AiLanding)} onMouseOut={e => (e.currentTarget.src = AiLanding2 )}/>
-                <paragraph className={`${styles.paragraph}`}>Human-centered thinking in AI </paragraph> <br />
-                <paragraph className={`${styles.link}`}>Protected work at McKinsey - contact for more info!</paragraph>
-            </div> 
-            </a>
             
 
             <div className={`work-right ml-2`}>
                 <a href="https://designawards.core77.com/Interaction/95544/JOUL-exploring-sustainability-through-play" target="_blank" rel="noopener noreferrer">
                     <img class="rounded-xl mb-2 joul-cursor" src={JoulLanding} alt="Fido" 
-                    onMouseEnter={(e) => {setIsJoulHovered(true);
+                        onMouseEnter={(e) => {setIsJoulHovered(true);
                         e.currentTarget.src = JoulLanding; }}
                         onMouseLeave={(e) => {setIsJoulHovered(false);
                         e.currentTarget.src = JoulLanding2; }}/>
