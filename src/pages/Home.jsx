@@ -2,12 +2,16 @@ import styles, { layout } from '../style';
 import React from 'react';
 import { useState, useRef } from 'react';
 import '../App.css';
-import { Routes, Route, NavLink, Link } from 'react-router-dom';
+import { Routes, Route, NavLink, Link, useLocation } from 'react-router-dom';
 import CustomCursor from "./CustomCursor";
 var FidoLanding = require('../assets/Fido_landing.png');
 var FidoLanding2 = require('../assets/Fido_landing2.png');
+var FidoLanding3 = require('../assets/Fido_landing4.jpg');
+var FidoLanding4 = require('../assets/Fido_landing5.jpg');
 var KanLanding = require('../assets/Kan_landing.png');
 var KanLanding2 = require('../assets/Kan_landing2.png');
+var KanLanding3 = require('../assets/Kan_landing3.jpg');
+var KanLanding4 = require('../assets/Kan_landing4.jpg');
 var McKLanding = require('../assets/McK_landing.png');
 var McKLanding2 = require('../assets/McK_landing_2.png');
 var HypeLanding = require('../assets/Hype_landing.png');
@@ -38,8 +42,9 @@ const Home = () => {
     const [isJoulHovered, setIsJoulHovered] = useState(false);
     const [isMeHovered, setIsMeHovered] = useState(false);
     const [isHypeHovered, setIsHypeHovered] = useState(false);
-    
+
     return(
+        
     <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
     <div
         className={`cursor-style ${isKanHovered ? 'kan-hovered' : ''} ${isFidoHovered ? 'fido-hovered' : ''} ${isJoulHovered ? 'joul-hovered' : ''} ${isHypeHovered ? 'hype-hovered' : ''}
@@ -96,18 +101,18 @@ const Home = () => {
                 <paragraph className={`${styles.link}`}>Protected work at McKinsey - password mentioned in CV</paragraph>
             </div>
             <div className={`work-right ml-2`}>
-                <Link to ="/fido" rel="noreferrer">
+                <Link to ="/kan" rel="noreferrer">
                     <img class="rounded-xl mb-2 fido-cursor" 
-                    src={ FidoLanding }
-                    alt="Fido" 
-                    onMouseEnter={(e) => {setIsFidoHovered(true);
-                    e.currentTarget.src = FidoLanding2; }}
-                    onMouseLeave={(e) => {setIsFidoHovered(false);
-                    e.currentTarget.src = FidoLanding; }} 
+                    src={ KanLanding3 }
+                    alt="Kan" 
+                    onMouseEnter={(e) => {setIsKanHovered(true);
+                    e.currentTarget.src = KanLanding3; }}
+                    onMouseLeave={(e) => {setIsKanHovered(false);
+                    e.currentTarget.src = KanLanding4; }} 
                     />
                 </Link>
-                <paragraph className={`${styles.paragraph}`}>Enhancing autonomy and trust in autonomous vehicles</paragraph> <br />
-                <paragraph className={`${styles.link}`}>IxDA 2023 Winner in Disrupting | Sponsored by Volvo Cars</paragraph>
+                <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees</paragraph> <br />
+                <paragraph className={`${styles.link}`}>Business building project at McKinsey</paragraph>
             </div> 
         </div>
 
@@ -115,15 +120,15 @@ const Home = () => {
             <h2 className={`${styles.heading2}`}>Recent works</h2> 
         </div>
         <div className={`${styles.boxWidth} + ${styles.flexCenter}`}>
-            <Link to ="/kan" rel="noreferrer">
+            <Link to ="/fido" rel="noreferrer">
              <div className={`work-right mr-4`}>
-                <img class="rounded-xl mb-2" src={KanLanding} alt="HCAI" 
-                    onMouseEnter={(e) => {setIsKanHovered(true);
-                    e.currentTarget.src = KanLanding; }}
-                    onMouseLeave={(e) => {setIsKanHovered(false);
-                    e.currentTarget.src = KanLanding2; }}/>
-                <paragraph className={`${styles.paragraph}`}>Kan - digital financial health service for employees </paragraph> <br />
-                <paragraph className={`${styles.link}`}>Business building project at McKinsey</paragraph>
+                <img class="rounded-xl mb-2" src={FidoLanding3} alt="Fido" 
+                    onMouseEnter={(e) => {setIsFidoHovered(true);
+                    e.currentTarget.src = FidoLanding3; }}
+                    onMouseLeave={(e) => {setIsFidoHovered(false);
+                    e.currentTarget.src = FidoLanding4; }}/>
+                <paragraph className={`${styles.paragraph}`}>Autonomy & trust in autonomous vehicles </paragraph> <br />
+                <paragraph className={`${styles.link}`}>IxDA 2023 Winner in Disrupting | Sponsored by Volvo Cars</paragraph>
             </div> 
             </Link>
 
