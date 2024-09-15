@@ -10,6 +10,7 @@ var KanLandingNew1 = require('../assets/Kan_landing_new_1.png');
 var KanLandingNew2 = require('../assets/Kan_landing_new_2.png');
 var BoELanding1 = require('../assets/BoE_landing_1.png');
 var BoELanding2 = require('../assets/BoE_landing_2.png');
+// import BoEVideo from '../assets/BoE_recording.mov';
 var McKLanding1 = require('../assets/McK_landing_1.png');
 var McKLanding2 = require('../assets/McK_landing_2.png');
 var FidoLandingNew = require('../assets/Fido_landing_new.png');

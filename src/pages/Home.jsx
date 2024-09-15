@@ -6,6 +6,10 @@ import { Routes, Route, NavLink, Link, useLocation } from 'react-router-dom';
 import CustomCursor from "./CustomCursor";
 import { motion, useInView } from "framer-motion";
 import { downWithFade, riseWithFade, riseWithMoreFade, SFade, OFade, HFade, EFade, UFade, MFade, AFade, BFade, CFade, DFade, FFade, GFade  } from './animations';
+import BoEVideo from '../assets/BoE_video.mp4';
+import BoEVideo2 from '../assets/BoE-video2.mp4';
+import McKVideo from '../assets/McK-video.mp4';
+import KanVideo from '../assets/kan-recording.mp4';
 var KanLandingNew1 = require('../assets/Kan_landing_new_1.png');
 var KanLandingNew2 = require('../assets/Kan_landing_new_2.png');
 var BoELanding1 = require('../assets/BoE_landing_1.png');
@@ -66,6 +70,36 @@ const Home = () => {
     const [isHovered16, setIsHovered16] = useState(false);
     const [isHovered17, setIsHovered17] = useState(false);
 
+    const videoRef = useRef(null);
+    useEffect(() => {
+        const video = videoRef.current;
+        // Define the IntersectionObserver callback
+        const observerCallback = (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              video.play(); // Play the video when in view
+            } else {
+              video.pause(); // Pause the video when out of view
+            }
+          });
+        };
+    
+        // Create the IntersectionObserver instance
+        const observer = new IntersectionObserver(observerCallback, {
+          threshold: 0.25, // Adjust this to control how much of the video needs to be in view
+        });
+    
+        if (video) {
+          observer.observe(video); // Start observing the video
+        }
+    
+        // Cleanup the observer when component unmounts
+        return () => {
+          if (video) {
+            observer.unobserve(video);
+          }
+        };
+      }, []);
     return(
 
     <motion.section className="w-full flex flex-col justify-start items-start overflow-hidden mt-12" initial="initial" animate="animate" >
@@ -90,10 +124,12 @@ const Home = () => {
         <motion.div className="w-full flex justify-start pt-6" variants={riseWithFade}>
             <div className="basis-4/12 flex-col one-line">
                 <a href="https://drive.google.com/file/d/1m7AMO-KRl-YbCw8SUdZ_WBI1eJKsY6jk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <paragraph className={`${styles.paragraph3} mr-6`}>Link to CV</paragraph>
+                    <HoveredText className={`${styles.paragraph3} mr-6`} text="Link to CV" />
+                    {/* <paragraph className={`${styles.paragraph3} mr-6`}>Link to CV</paragraph> */}
                 </a>
                 <a href={"mailto:sohheum@gmail.com?body=Hello! Let's grab a coffee"}>
-                    <paragraph className={`${styles.paragraph3}`}>Coffee chat?</paragraph>
+                <HoveredText className={`${styles.paragraph3} mr-6`} text="Coffee chat?" />
+                    {/* <paragraph className={`${styles.paragraph3}`}>Coffee chat?</paragraph> */}
                 </a>
             </div>
         </motion.div>
@@ -214,11 +250,7 @@ const Home = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-                <img 
-                    class="rounded-xl" 
-                    src={ BoELanding1 }
-                    alt="Kan" 
-                />
+                <video class="rounded-xl" src={BoEVideo2} autoPlay muted loop />
             </div>
         </div>
         <div className="w-full flex justify-start mt-16 ">
@@ -249,11 +281,13 @@ const Home = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-                <img 
+                {/* <img 
                     class="rounded-xl" 
                     src={ BoELanding2 }
                     alt="Kan" 
-                />
+                /> */}
+                 {/* <video class="rounded-xl" src={BoEVideo} autoPlay muted loop /> */}
+                 <video class="rounded-xl" src={BoEVideo} ref={videoRef} muted loop />
             </div>
         </div>
 
@@ -323,20 +357,21 @@ const Home = () => {
         <motion.div className="w-full flex justify-start mt-8" variants={riseWithMoreFade}>
             <div className="basis-5/12 flex-col">
             </div>
-            <div className="basis-3/12 pr-2 flex-col">
-                <img 
+            <div className="basis-7/12 pr-2 flex-col">
+            <video class="rounded-xl" src={KanVideo} autoPlay muted loop />
+                {/* <img 
                     class="rounded-xl" 
                     src={ KanLandingNew1 }
                     alt="Kan" 
-                />
+                /> */}
             </div>
-            <div className="basis-4/12 pl-2 flex-col">
+            {/* <div className="basis-4/12 pl-2 flex-col">
                 <img 
                     class="rounded-xl" 
                     src={ KanLandingNew2 }
                     alt="Kan" 
                 />
-            </div>
+            </div> */}
         </motion.div>
         </Link>
         <Link to ="/hyper" rel="noreferrer">
@@ -366,20 +401,21 @@ const Home = () => {
         <motion.div className="w-full flex justify-start mt-8" variants={riseWithMoreFade}>
             <div className="basis-5/12 flex-col">
             </div>
-            <div className="basis-4/12 pr-2 flex-col">
-                <img 
+            <div className="basis-7/12 pr-2 flex-col">
+            <video class="rounded-xl" src={McKVideo} autoPlay muted loop />
+                {/* <img 
                     class="rounded-xl" 
                     src={ McKLanding1 }
                     alt="Kan" 
-                />
+                /> */}
             </div>
-            <div className="basis-3/12 pl-2 flex-col">
+            {/* <div className="basis-3/12 pl-2 flex-col">
                 <img 
                     class="rounded-xl" 
                     src={ McKLanding2 }
                     alt="Kan" 
                 />
-            </div>
+            </div> */}
         </motion.div>
         </Link>
 
@@ -419,7 +455,7 @@ const Home = () => {
 
        
 
-      <div className="w-full flex justify-between items-center mt-24 md:flex-row flex-col pt-6 border-t-[0.7px] border-t-black ">
+      <div className="w-full flex justify-between items-center mt-24 mb-12 md:flex-row flex-col pt-6 border-t-[0.7px] border-t-black ">
         <p className="font-pretendard font-light tracking-tight text-[1rem] text-black">
             All Rights Reserved by Soheum Hwang, built by me!
         </p>
@@ -477,6 +513,49 @@ const Home = () => {
                                     key={charIndex}
                                     className="inline-block"
                                     variants={defaultAnimations}
+                                >
+                                    {char}
+                                </motion.span>
+                            ))}
+                            <span className="inline-block">&nbsp;</span>
+                        </span>
+                    ))}
+                </motion.span>
+            )
+        );
+    };
+
+    const hoverAnimations = {
+        hidden: {
+            opacity: 1,
+            y: -3,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+        },
+    };
+    export const HoveredText = ({ once, text, className, el: Wrapper = "p" }) => {
+        const [isHovered, setIsHovered] = useState(false);
+    
+        return (
+            React.createElement(Wrapper, { className },
+                <span className="sr-only">{text}</span>,
+                <motion.span
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    initial="hidden"
+                    animate={isHovered ? "visible" : "hidden"}
+                    transition={{ staggerChildren: 0.1 }}
+                    aria-hidden
+                >
+                    {text.split(" ").map((word, wordIndex) => (
+                        <span key={wordIndex} className="inline-block">
+                            {word.split("").map((char, charIndex) => (
+                                <motion.span
+                                    key={charIndex}
+                                    className="inline-block"
+                                    variants={hoverAnimations}
                                 >
                                     {char}
                                 </motion.span>
