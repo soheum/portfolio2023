@@ -20,7 +20,9 @@
   display: inline;
   vertical-align: top;
 }
-
+.boe {
+  height: 1.5rem;
+}
 .videomask{
   border-radius: 12px;
   overflow: hidden;
@@ -57,9 +59,9 @@
   margin-top: 4rem;
 }
 
-* {
+/* * {
   cursor: none;
-}
+} */
 .cursor-style {
   background-color: #1E5CFF;
   height: 0.6rem;

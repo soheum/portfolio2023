@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import { useState, useRef } from 'react';
 import ReactGA from 'react-ga4';
-import { Fido, Home, Kan, Aboutme, Hyper, CustomCursor} from './pages';
+import { Fido, Home, Kan, Aboutme, Hyper, CustomCursor, HomeTest} from './pages';
 import styles from './style';
 ReactGA.initialize('G-B4YMGV71Q9');
 
@@ -20,6 +20,8 @@ const App = () => {
           <Route exact path="/aboutme" element={<Aboutme />} />
           <Route exact path="/kan" element={<Kan />} />
           <Route exact path="/hyper" element={<Hyper />} />
+          <Route exact path="/hometest" element={<HomeTest />} />
+          
         </Routes>   
       </div>
     </div>
