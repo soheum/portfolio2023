@@ -183,7 +183,7 @@ const HomeTest = () => {
                 onMouseEnter={() => setIsHovered2(true) }
                 onMouseLeave={() => setIsHovered2(false)}
                 >
-                    <motion.img src={Veryday} alt="veryday" className="boe mr-1" animate={{ width: isHovered2 ? '1.1rem' : '0rem' }} />
+                    <motion.img src={Veryday} alt="veryday" className="boe" animate={{ width: isHovered2 ? '1.1rem' : '0rem' }} />
                     <body2 className={`${styles.body2} `}>McKinsey Design.</body2> 
                 </div>
                 <body3 className={`${styles.body3} mr-1 `}> I did my master's at</body3>
@@ -313,8 +313,8 @@ const HomeTest = () => {
                 onMouseEnter={() => setIsHovered3(true) }
                 onMouseLeave={() => setIsHovered3(false)}
                 >
-                <motion.img src={People} alt="veryday" className="boe mr-1" animate={{ width: isHovered3 ? '1.1rem' : '0rem' }} />
-                <body2 className={`${styles.body2} pb-2`}>adoption.</body2>
+                <motion.img src={People} alt="veryday" className="boe " animate={{ width: isHovered3 ? '1.1rem' : '0rem' }} />
+                <body2 className={`${styles.body2} `}>adoption.</body2>
                 </div>
             </div>
         </div>
@@ -364,7 +364,7 @@ const HomeTest = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-            <video class="rounded-xl" src={KanVideo} autoPlay muted loop />
+            <motion.video className="rounded-xl" src={KanVideo} autoPlay muted loop whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }}/>
             </div>
         </motion.div>
         </Link>
@@ -396,7 +396,7 @@ const HomeTest = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-            <video class="rounded-xl" src={McKVideo} autoPlay muted loop />
+            <motion.video class="rounded-xl" src={McKVideo} autoPlay muted loop whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }}/>
             </div>
         </motion.div>
         </Link>
@@ -426,10 +426,10 @@ const HomeTest = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-                <img 
+                <motion.img 
                     class="rounded-xl" 
                     src={ FidoLandingNew }
-                    alt="Kan" 
+                    alt="Kan" whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }}
                 />
             </div>
         </motion.div>
