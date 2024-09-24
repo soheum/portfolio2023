@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import '../App.css';
 import { Routes, Route, NavLink, Link, useLocation } from 'react-router-dom';
 import CustomCursor from "./CustomCursor";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { downWithFade, riseWithFade, riseWithMoreFade, SFade, OFade, HFade, EFade, UFade, MFade, AFade, BFade, CFade, DFade, FFade, GFade  } from './animations';
 import BoEVideo from '../assets/BoE_video.mp4';
 import BoEVideo2 from '../assets/BoE-video2.mp4';
@@ -39,14 +39,12 @@ var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png');
 var Youtube = require('../assets/youtube_icon.png');
 
-
 const Home = () => {
     // const cursor = useRef(null)
     // const changePosition = (e) => {
     //     cursor.current.style.top = `${e.clientY}px`;
     //     cursor.current.style.left = `${e.clientX}px`;
     // }
-
     // const [isKanHovered, setIsKanHovered] = useState(false);
     // const [isFidoHovered, setIsFidoHovered] = useState(false);
     // const [isJoulHovered, setIsJoulHovered] = useState(false);
@@ -100,6 +98,22 @@ const Home = () => {
           }
         };
       }, []);
+
+    //   const baseText = "strategic";
+    //   const count = useMotionValue(0);
+    //   const rounded = useTransform(count, (latest) => Math.round(latest));
+    //   const displayText = useTransform(rounded, (latest) => 
+    //     baseText.slice(0, latest)
+    //     );
+    // useEffect(() => {
+    //     const controls = animate(count, baseText.length, {
+    //         type: "tween",
+    //         duration: 1,
+    //         ease: "easeInOut",
+    //     });
+    //     return controls.stop;
+    // }, [count]);
+
     return(
 
     <motion.section className="w-full flex flex-col justify-start items-start overflow-hidden mt-12" initial="initial" animate="animate" >
@@ -125,17 +139,15 @@ const Home = () => {
             <div className="basis-4/12 flex-col one-line">
                 <a href="https://drive.google.com/file/d/1m7AMO-KRl-YbCw8SUdZ_WBI1eJKsY6jk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     <HoveredText className={`${styles.paragraph3} mr-6`} text="Link to CV" />
-                    {/* <paragraph className={`${styles.paragraph3} mr-6`}>Link to CV</paragraph> */}
                 </a>
                 <a href={"mailto:sohheum@gmail.com?body=Hello! Let's grab a coffee"}>
                 <HoveredText className={`${styles.paragraph3} mr-6`} text="Coffee chat?" />
-                    {/* <paragraph className={`${styles.paragraph3}`}>Coffee chat?</paragraph> */}
                 </a>
             </div>
         </motion.div>
         <motion.div className="w-full flex justify-start mt-24 pt-12 border-t-[1px] border-t-grey" variants={riseWithFade}>
             <div className="basis-4/12 flex-col">
-                <paragraph className={`${styles.paragraph3}`}>Hey 🇬🇧, Hej 🇸🇪, 안녕하세요 🇰🇷</paragraph>
+                <motion.paragraph className={`${styles.paragraph3}`}>Hey 🇬🇧, Hej 🇸🇪, 안녕하세요 🇰🇷</motion.paragraph>
             </div>
             <div className="basis-1/12 flex-col">
             </div>
@@ -151,7 +163,7 @@ const Home = () => {
                 onMouseLeave={() => setIsHovered15(false)}
                 >
                     <motion.img src={Brain} alt="veryday" className="boe mr-1" animate={{ width: isHovered15 ? '1.5rem' : '0rem' }} />
-                    <body2 className={`${styles.body2} mb-2`}>strategic thinking, </body2>
+                    <motion.span className={`${styles.body2} mb-2`}>strategic thinking</motion.span>
                 </div>
                 <div className="inline-flex align-middle" 
                 onMouseEnter={() => setIsHovered14(true) }
@@ -286,8 +298,7 @@ const Home = () => {
                     src={ BoELanding2 }
                     alt="Kan" 
                 /> */}
-                 {/* <video class="rounded-xl" src={BoEVideo} autoPlay muted loop /> */}
-                 <video class="rounded-xl" src={BoEVideo} ref={videoRef} muted loop />
+                 <video class="rounded-xl" src={BoEVideo} autoPlay muted loop />
             </div>
         </div>
 
@@ -359,19 +370,7 @@ const Home = () => {
             </div>
             <div className="basis-7/12 pr-2 flex-col">
             <video class="rounded-xl" src={KanVideo} autoPlay muted loop />
-                {/* <img 
-                    class="rounded-xl" 
-                    src={ KanLandingNew1 }
-                    alt="Kan" 
-                /> */}
             </div>
-            {/* <div className="basis-4/12 pl-2 flex-col">
-                <img 
-                    class="rounded-xl" 
-                    src={ KanLandingNew2 }
-                    alt="Kan" 
-                />
-            </div> */}
         </motion.div>
         </Link>
         <Link to ="/hyper" rel="noreferrer">
@@ -403,19 +402,7 @@ const Home = () => {
             </div>
             <div className="basis-7/12 pr-2 flex-col">
             <video class="rounded-xl" src={McKVideo} autoPlay muted loop />
-                {/* <img 
-                    class="rounded-xl" 
-                    src={ McKLanding1 }
-                    alt="Kan" 
-                /> */}
             </div>
-            {/* <div className="basis-3/12 pl-2 flex-col">
-                <img 
-                    class="rounded-xl" 
-                    src={ McKLanding2 }
-                    alt="Kan" 
-                />
-            </div> */}
         </motion.div>
         </Link>
 
@@ -481,6 +468,18 @@ const Home = () => {
     }
 
 
+    const cursorVariants = {
+        blinking: {
+          opacity: [0, 0, 1, 1],
+          transition: {
+            duration: 1,
+            repeat: Infinity,
+            repeatDelay: 0,
+            ease: "linear",
+            times: [0, 0.5, 0.5, 1]
+          }
+        }
+      };
     const defaultAnimations = {
         hidden: {
             opacity: 0,

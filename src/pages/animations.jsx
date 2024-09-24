@@ -10,6 +10,10 @@ export const SFade = {
             delay: 1.4,         
         },
     },
+    movedUp: {
+        y: -200,
+        opacity: 1
+    }
 };
 export const OFade = {
     initial: {
@@ -186,7 +190,7 @@ export const riseWithFade = {
 };
 export const riseWithMoreFade = {
     initial: {
-        y: 200,
+        y: 30,
         opacity: 0,
     },
     animate: {
@@ -196,6 +200,38 @@ export const riseWithMoreFade = {
             ease: [0.6, 0.1, 0.05, 0.95],
             duration: 2,
             delay: 4.8,
+        },
+    },
+};
+
+export const riseWithMoreFade2 = {
+    initial: {
+        y: 30,
+        opacity: 0,
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            ease: [0.6, 0.1, 0.05, 0.95],
+            duration: 2,
+            delay: 5,
+        },
+    },
+};
+
+export const riseWithMoreFade3 = {
+    initial: {
+        y: 30,
+        opacity: 0,
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            ease: [0.6, 0.1, 0.05, 0.95],
+            duration: 2,
+            delay: 5.2,
         },
     },
 };
