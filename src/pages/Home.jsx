@@ -2,10 +2,12 @@ import styles, { layout } from '../style';
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import '../App.css';
+import '../index.css';
 import { Routes, Route, NavLink, Link, useLocation } from 'react-router-dom';
 import CustomCursor from "./CustomCursor";
-import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
-import { downWithFade, riseWithFade, riseWithMoreFade, SFade, OFade, HFade, EFade, UFade, MFade, AFade, BFade, CFade, DFade, FFade, GFade  } from './animations';
+import Arrow from './Arrow';
+import { motion, useInView, useMotionValue, useMotionTemplate, useTransform, animate } from "framer-motion";
+import { downWithFade, riseWithFade, riseWithMoreFade, riseWithMoreFade2, riseWithMoreFade3, SFade, OFade, HFade, EFade, UFade, MFade, AFade, BFade, CFade, DFade, FFade, GFade  } from './animations';
 import BoEVideo from '../assets/BoE_video.mp4';
 import BoEVideo2 from '../assets/BoE-video2.mp4';
 import McKVideo from '../assets/McK-video.mp4';
@@ -30,6 +32,9 @@ var Visual = require('../assets/visual.png');
 var UX = require('../assets/ux.png');
 var App = require('../assets/app.png');
 var Car = require('../assets/car.png');
+var Complex = require('../assets/Complex.png');
+var Thinking = require('../assets/Thinking.png');
+var User = require('../assets/User.png');
 var Brain = require('../assets/brain.png');
 var Philips = require('../assets/philips.png');
 var Amore = require('../assets/amorepacific.png');
@@ -39,17 +44,9 @@ var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png');
 var Youtube = require('../assets/youtube_icon.png');
 
+const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C'];
+
 const Home = () => {
-    // const cursor = useRef(null)
-    // const changePosition = (e) => {
-    //     cursor.current.style.top = `${e.clientY}px`;
-    //     cursor.current.style.left = `${e.clientX}px`;
-    // }
-    // const [isKanHovered, setIsKanHovered] = useState(false);
-    // const [isFidoHovered, setIsFidoHovered] = useState(false);
-    // const [isJoulHovered, setIsJoulHovered] = useState(false);
-    // const [isMeHovered, setIsMeHovered] = useState(false);
-    // const [isHypeHovered, setIsHypeHovered] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false);
@@ -67,165 +64,163 @@ const Home = () => {
     const [isHovered15, setIsHovered15] = useState(false);
     const [isHovered16, setIsHovered16] = useState(false);
     const [isHovered17, setIsHovered17] = useState(false);
-
-    const videoRef = useRef(null);
-    useEffect(() => {
-        const video = videoRef.current;
-        // Define the IntersectionObserver callback
-        const observerCallback = (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              video.play(); // Play the video when in view
-            } else {
-              video.pause(); // Pause the video when out of view
-            }
-          });
-        };
-    
-        // Create the IntersectionObserver instance
-        const observer = new IntersectionObserver(observerCallback, {
-          threshold: 0.25, // Adjust this to control how much of the video needs to be in view
-        });
-    
-        if (video) {
-          observer.observe(video); // Start observing the video
-        }
-    
-        // Cleanup the observer when component unmounts
-        return () => {
-          if (video) {
-            observer.unobserve(video);
-          }
-        };
-      }, []);
-
-    //   const baseText = "strategic";
-    //   const count = useMotionValue(0);
-    //   const rounded = useTransform(count, (latest) => Math.round(latest));
-    //   const displayText = useTransform(rounded, (latest) => 
-    //     baseText.slice(0, latest)
-    //     );
-    // useEffect(() => {
-    //     const controls = animate(count, baseText.length, {
-    //         type: "tween",
-    //         duration: 1,
-    //         ease: "easeInOut",
-    //     });
-    //     return controls.stop;
-    // }, [count]);
+    const [isHovered18, setIsHovered18] = useState(false);
+    const [isHovered19, setIsHovered19] = useState(false);
+    const [isHovered20, setIsHovered20] = useState(false);
+    const [isHovered21, setIsHovered21] = useState(false);
+    const [isHovered22, setIsHovered22] = useState(false);
+    const [isHovered23, setIsHovered23] = useState(false);
 
     return(
-
-    <motion.section className="w-full flex flex-col justify-start items-start overflow-hidden mt-12" initial="initial" animate="animate" >
-        {/* <div className="w-full flex justify-between items-center mb-20"> */}
-        <div className="flex">
-                <AnimatedText className={`${styles.heading1} `} text="Soheum Hwang" />
-                <motion.span class="grey-italics" variants={SFade}>  ( </motion.span>
-                <motion.span class="grey-italics" variants={OFade}>  s </motion.span>
-                <motion.span class="grey-italics" variants={HFade}>  o </motion.span>
-                <motion.span class="grey-italics mr-2" variants={EFade}>  ? </motion.span>
+    <motion.section className="" initial="initial" animate="animate"  > 
+        {/* <div className="min-h-[70vh] transition-all ease-in-out delay-150 duration-1000" style={{ backgroundImage: isHoveredBottom ? "radial-gradient(60% 20% at 50% 85%, #ECFDDB, transparent" : "radial-gradient(60% 20% at 50% 85%, white, transparent"}}> */}
+        <div className="flex-col mt-36">
+            <div className="one-line">
+                <AnimatedText className={`${styles.heading1}`} text="Soheum Hwang" />
+                <motion.span class="grey-italics" variants={SFade}> (</motion.span>
+                <motion.span class="grey-italics" variants={OFade}>s</motion.span>
+                <motion.span class="grey-italics" variants={HFade}>o</motion.span>
+                <motion.span class="grey-italics mr-2" variants={EFade}>? </motion.span>
                 <motion.span class="grey-italics" variants={UFade}> h</motion.span>
-                <motion.span class="grey-italics" variants={MFade}> m</motion.span>
-                <motion.span class="grey-italics" variants={AFade}> m</motion.span>
-                <motion.span class="grey-italics" variants={BFade}> m</motion.span>
-                <motion.span class="grey-italics" variants={CFade}> .</motion.span>
-                <motion.span class="grey-italics" variants={DFade}> .</motion.span>
-                <motion.span class="grey-italics" variants={FFade}> .</motion.span>
-                <motion.span class="grey-italics" variants={GFade}> )</motion.span>
-            {/* <p className="font-pretendard">want to grab coffee?</p> */}
+                <motion.span class="grey-italics" variants={MFade}>m</motion.span>
+                <motion.span class="grey-italics" variants={AFade}>m</motion.span>
+                <motion.span class="grey-italics" variants={BFade}>m</motion.span>
+                <motion.span class="grey-italics" variants={CFade}>.</motion.span>
+                <motion.span class="grey-italics" variants={DFade}>.</motion.span>
+                <motion.span class="grey-italics" variants={FFade}>.</motion.span>
+                <motion.span class="grey-italics" variants={GFade}>)</motion.span> 
+            </div>
+            <motion.div className="mt-2" variants={riseWithMoreFade}>
+                <motion.paragraph className={`${styles.paragraph3}`}>Hey 🇬🇧, Hej 🇸🇪, 안녕하세요 🇰🇷</motion.paragraph>
+            </motion.div>
         </div>
-
-        <motion.div className="w-full flex justify-start pt-6" variants={riseWithFade}>
-            <div className="basis-4/12 flex-col one-line">
+        <motion.div className="mt-12 flex" variants={riseWithMoreFade2}>
+            <div className="justify-start flex-col basis-2/12">
                 <a href="https://drive.google.com/file/d/1m7AMO-KRl-YbCw8SUdZ_WBI1eJKsY6jk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <HoveredText className={`${styles.paragraph3} mr-6`} text="Link to CV" />
+                    <HoveredText className={`font-pretendard font-light tracking-tight text-[1.15rem] leading-normal mr-6 mb-2`} text="Link to CV" />
                 </a>
                 <a href={"mailto:sohheum@gmail.com?body=Hello! Let's grab a coffee"}>
-                <HoveredText className={`${styles.paragraph3} mr-6`} text="Coffee chat?" />
+                <HoveredText2 className={`font-pretendard font-light tracking-tight text-[1.15rem] leading-normal mr-6`} text="Coffee chat?" />
                 </a>
             </div>
-        </motion.div>
-        <motion.div className="w-full flex justify-start mt-24 pt-12 border-t-[1px] border-t-grey" variants={riseWithFade}>
-            <div className="basis-4/12 flex-col">
-                <motion.paragraph className={`${styles.paragraph3}`}>Hey 🇬🇧, Hej 🇸🇪, 안녕하세요 🇰🇷</motion.paragraph>
-            </div>
-            <div className="basis-1/12 flex-col">
-            </div>
-            <div className="basis-7/12">
-                <body3 className={`${styles.body3}`}>I </body3>
-                <body2 className={`${styles.body2}`}>discover design </body2>
-                <body2 className={`${styles.body2}`}>values</body2>
-                <body3 className={`${styles.body3}`}> and </body3>
-                <body2 className={`${styles.body2}`}>deliver digital experiences</body2>
-                <body3 className={`${styles.body3}`}> with a multidisciplinary team through </body3>
-                <div className="inline-flex align-middle" 
+            <div className="basis-3/12"></div>
+            <div className="justify-start flex-col basis-6/12">
+            <body3 className={`${styles.body3}`}>I discover and design digital experiences that</body3>
+            <div className="inline-flex items-baseline" 
+                onMouseEnter={() => setIsHovered19(true) }
+                onMouseLeave={() => setIsHovered19(false)}
+                >
+                <body2 className={`${styles.body2} ml-1`}> unravel complexity</body2>
+                <motion.img src={Complex} alt="veryday" className="boe mr-1" animate={{ width: isHovered19 ? '1.1rem' : '0rem' }} /></div>
+                <body3 className={`${styles.body3}`}> with a focus on </body3>
+                <div className="inline-flex items-baseline" 
+                onMouseEnter={() => setIsHovered20(true) }
+                onMouseLeave={() => setIsHovered20(false)}
+                >
+                    <motion.img src={User} alt="veryday" className="boe mr-1" animate={{ width: isHovered20 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} `}>user needs.</body2></div>
+                <body3 className={`${styles.body3}`}> I converge </body3>
+                <div className="inline-flex items-baseline" 
+                onMouseEnter={() => setIsHovered21(true) }
+                onMouseLeave={() => setIsHovered21(false)}
+                >
+                    <motion.img src={App} alt="veryday" className="boe mr-1" animate={{ width: isHovered21 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} `}>technology and humans</body2></div>
+                <body3 className={`${styles.body3}`}> through </body3>
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered15(true) }
                 onMouseLeave={() => setIsHovered15(false)}
                 >
-                    <motion.img src={Brain} alt="veryday" className="boe mr-1" animate={{ width: isHovered15 ? '1.5rem' : '0rem' }} />
-                    <motion.span className={`${styles.body2} mb-2`}>strategic thinking</motion.span>
+                     <motion.span className={`${styles.body2} `}>digital UX, </motion.span>
+                    <motion.img src={UX} alt="veryday" className="boe mr-1" animate={{ width: isHovered15 ? '1.1rem' : '0rem' }} />
                 </div>
-                <div className="inline-flex align-middle" 
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered14(true) }
                 onMouseLeave={() => setIsHovered14(false)}
                 >
-                    <motion.img src={UX} alt="veryday" className="boe mr-1" animate={{ width: isHovered14 ? '1.5rem' : '0rem' }} />
-                    <body2 className={`${styles.body2} mb-2`}>digital UX, and </body2> 
+                    <body2 className={`${styles.body2} `}>strategic thinking </body2> 
+                    <motion.img src={Brain} alt="veryday" className="boe mr-1" animate={{ width: isHovered14 ? '1.1rem' : '0rem' }} />
                 </div>
-                <div className="inline-flex align-middle" 
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered4(true) }
                 onMouseLeave={() => setIsHovered4(false)}
                 >
-                    <motion.img src={Visual} alt="veryday" className="boe mr-1" animate={{ width: isHovered4 ? '1.5rem' : '0rem' }} />
-                    <body2 className={`${styles.body2} mb-2`}> visual storytelling.</body2> 
+                    <body2 className={`${styles.body2} `}> and visual storytelling.</body2> 
+                    <motion.img src={Visual} alt="veryday" className="boe mr-1" animate={{ width: isHovered4 ? '1.1rem' : '0rem' }} />
                 </div><br /> <br />
-                <body3 className={`${styles.body3} `}>Currently at </body3>
-                <div className="inline-flex align-middle" 
+
+                <body3 className={`${styles.body3} `}>Leveraging design both as a</body3>
+                <div className="inline-flex items-baseline" 
+                onMouseEnter={() => setIsHovered23(true) }
+                onMouseLeave={() => setIsHovered23(false)}
+                >
+                    <motion.img src={Advocacy} alt="veryday" className="boe mr-1" animate={{ width: isHovered23 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} mr-1`}> way of thinking</body2> </div>
+                <body3 className={`${styles.body3} `}>and as a practical tool for solving</body3>
+                <div className="inline-flex items-baseline" 
+                onMouseEnter={() => setIsHovered22(true) }
+                onMouseLeave={() => setIsHovered22(false)}
+                >
+                    <motion.img src={Thinking} alt="veryday" className="boe mr-1" animate={{ width: isHovered22 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} mr-1`}> real-world challenges,</body2> </div>
+                <body3 className={`${styles.body3} `}>I'm currently at </body3>
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered(true) }
                 onMouseLeave={() => setIsHovered(false)}
                 >
-                    <motion.img src={BoE} alt="bank of england" className="boe mr-1" animate={{ width: isHovered ? '1.5rem' : '0rem' }} />
-                <body2 className={`${styles.body2} pb-2 mr-1`}>Bank of England </body2>
+                    <motion.img src={BoE} alt="bank of england" className="boe mr-1" animate={{ width: isHovered ? '1.1rem' : '0rem' }} />
+                <body2 className={`${styles.body2} mr-1`}>Bank of England </body2>
                 </div>
-                <body3 className={`${styles.body3} mb-2 `}>as part of a transformation programme to </body3>
-                <body2 className={`${styles.body2} ml-1`}>redefine the future of data collection in 2031. </body2>
-                <body3 className={`${styles.body3} mb-2 mr-2`}>Previously, I was at</body3>
-                <div className="inline-flex align-middle items-center" 
+                <body3 className={`${styles.body3} `}>as part of a transformation programme to redefine the </body3> 
+                <div className="inline-flex items-baseline" 
+                onMouseEnter={() => setIsHovered18(true) }
+                onMouseLeave={() => setIsHovered18(false)}
+                >
+                    <motion.img src={Bank} alt="veryday" className="boe mr-1" animate={{ width: isHovered18 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} mr-1`}>future of data collection. </body2></div>
+                <body3 className={`${styles.body3} mr-2`}>Previously, I was at</body3>
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered2(true) }
                 onMouseLeave={() => setIsHovered2(false)}
                 >
-                    <motion.img src={Veryday} alt="veryday" className="boe mr-1" animate={{ width: isHovered2 ? '1.5rem' : '0rem' }} />
-                    <body2 className={`${styles.body2}  mb-2 `}>McKinsey Design.</body2> 
+                    <motion.img src={Veryday} alt="veryday" className="boe" animate={{ width: isHovered2 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} `}>McKinsey Design.</body2> 
                 </div>
                 <body3 className={`${styles.body3} mr-1 `}> I did my master's at</body3>
                 <body2 className={`${styles.body2}`}>Umeå Institute of Design,</body2>
                 <body3 className={`${styles.body3}`}> working with </body3>
-                <div className="inline-flex align-middle items-center" 
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered17(true) }
                 onMouseLeave={() => setIsHovered17(false)}
                 >
-                    <motion.img src={Philips} alt="veryday" className="boe mr-1" animate={{ width: isHovered17 ? '1.5rem' : '0rem' }} />
-                    <body2 className={`${styles.body2} pb-2`}>Philips, </body2>
+                    <motion.img src={Philips} alt="veryday" className="boe mr-1" animate={{ width: isHovered17 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2}`}>Philips, </body2>
                 </div>
-                <div className="inline-flex align-middle items-center" 
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered16(true) }
                 onMouseLeave={() => setIsHovered16(false)}
                 >
-                    <motion.img src={Amore} alt="veryday" className="boe mr-1  ml-1" animate={{ width: isHovered16 ? '1.5rem' : '0rem' }} />
-                    <body2 className={`${styles.body2} pb-2`}> Amorepacific, and </body2>
+                    <motion.img src={Amore} alt="veryday" className="boe mr-1  ml-1" animate={{ width: isHovered16 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} `}> Amorepacific, and </body2>
                 </div>
-                <div className="inline-flex align-middle" 
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered13(true) }
                 onMouseLeave={() => setIsHovered13(false)}
                 >
-                    <motion.img src={Volvo} alt="bank of england" className="boe mr-2 ml-1" animate={{ width: isHovered13 ? '1.5rem' : '0rem' }} />
-                    <body2 className={`${styles.body2} pb-2`}>Volvo Cars.</body2>
+                    <motion.img src={Volvo} alt="bank of england" className="boe mr-2 ml-1" animate={{ width: isHovered13 ? '1.1rem' : '0rem' }} />
+                    <body2 className={`${styles.body2} `}>Volvo Cars.</body2>
                 </div>
             </div>
         </motion.div>
+        {/* <div className={` h-[400px] w-full flex justify-center items-center`}
+         onMouseEnter={() => setIsHoveredBottom(true)}
+         onMouseLeave={() => setIsHoveredBottom(false)} 
+         >
+        </div> */}
+        {/* </div> */}
 
-        <motion.div variants={riseWithMoreFade}>
-        <div className="w-full flex justify-start mt-24 pt-12 border-t-[1px] border-t-grey">
+        <motion.div variants={riseWithMoreFade3} className="mt-24">
+        <div className="w-full flex justify-start pt-12 border-t-[1px] border-t-grey">
             <div className="basis-5/12 flex-col">
                 <paragraph className={`${styles.paragraph3}`}>At the Bank of England, I'm</paragraph>
             </div>
@@ -236,11 +231,11 @@ const Home = () => {
             <body2 className={`${styles.body2} pb-2 mr-1`}>business stakeholders, technology teams, and end users, </body2>
             <body3 className={`${styles.body3}`}>I’m drafting the future while balancing </body3>
             <body2 className={`${styles.body2}`}>user needs and </body2>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered11(true) }
                 onMouseLeave={() => setIsHovered11(false)}
                 >
-                <motion.img src={Reg} alt="bank of england" className="boe mr-1" animate={{ width: isHovered11 ? '1.5rem' : '0rem' }} />
+                <motion.img src={Reg} alt="bank of england" className="boe mr-1" animate={{ width: isHovered11 ? '1.1rem' : '0rem' }} />
                 <body2 className={`${styles.body2} mr-2 pb-2`}>regulatory requirements </body2>
             </div>
             <body3 className={`${styles.body3}`}>using a </body3>
@@ -248,11 +243,11 @@ const Home = () => {
             <body3 className={`${styles.body3}`}>Through </body3>
             <body2 className={`${styles.body2} `}>co-creation workshops, design artefacts, and prototypes, </body2>
             <body3 className={`${styles.body3}`}>I guide stakeholders through an </body3>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered5(true) }
                 onMouseLeave={() => setIsHovered5(false)}
                 >
-                <motion.img src={Crayon} alt="veryday" className="boe mr-1" animate={{ width: isHovered5 ? '1.5rem' : '0rem' }} />
+                <motion.img src={Crayon} alt="veryday" className="boe mr-1" animate={{ width: isHovered5 ? '1.1rem' : '0rem' }} />
             <body2 className={`${styles.body2} mb-2 mr-1`}>iterative design process </body2>
             </div>
             <body3 className={`${styles.body3}`}>to help them envision the future.</body3>
@@ -280,11 +275,11 @@ const Home = () => {
             <body2 className={`${styles.body2} mb-2`}>innovative methods </body2>
             <body3 className={`${styles.body3}`}>require extensive </body3>
             <body2 className={`${styles.body2}`}>change management, persuasive storytelling, and advocacy </body2>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered6(true) }
                 onMouseLeave={() => setIsHovered6(false)}
                 >
-                    <motion.img src={Advocacy} alt="veryday" className="boe " animate={{ width: isHovered6 ? '1.5rem' : '0rem' }} />
+                    <motion.img src={Advocacy} alt="veryday" className="boe " animate={{ width: isHovered6 ? '1.1rem' : '0rem' }} />
                     <body2 className={`${styles.body2} pb-2`}>within the organisation.</body2> 
             </div>
             </div>
@@ -314,12 +309,12 @@ const Home = () => {
                 <body2 className={`${styles.body2} mr-1`}>awareness across the organisation</body2>
                 <body3 className={`${styles.body3} mr-1`}>for its rollout, and getting</body3>
                 <body2 className={`${styles.body2} mr-1`}>internal buy-in for its </body2>
-                <div className="inline-flex align-middle" 
+                <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered3(true) }
                 onMouseLeave={() => setIsHovered3(false)}
                 >
-                <motion.img src={People} alt="veryday" className="boe mr-1" animate={{ width: isHovered3 ? '1.5rem' : '0rem' }} />
-                <body2 className={`${styles.body2} pb-2`}>adoption.</body2>
+                <motion.img src={People} alt="veryday" className="boe " animate={{ width: isHovered3 ? '1.1rem' : '0rem' }} />
+                <body2 className={`${styles.body2} `}>adoption.</body2>
                 </div>
             </div>
         </div>
@@ -332,12 +327,12 @@ const Home = () => {
             </div>
             <div className="basis-7/12 flex-col">
             <body3 className={`${styles.body3}`}>Part of </body3>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered9(true) }
                 onMouseLeave={() => setIsHovered9(false)}
                 >
-                <motion.img src={App} alt="veryday" className="boe mr-2" animate={{ width: isHovered9 ? '1.5rem' : '0rem' }} />
-                <body2 className={`${styles.body2} mr-2 pb-2`}>digital business building, </body2>
+                <motion.img src={App} alt="veryday" className="boe" animate={{ width: isHovered9 ? '1.1rem' : '0rem' }} />
+                <body2 className={`${styles.body2} mr-1`}>digital business building, </body2>
             </div>
             <body3 className={`${styles.body3} mr-2`}>working cross-functionally to create</body3>
             
@@ -348,20 +343,20 @@ const Home = () => {
             <body3 className={`${styles.body3}`}>I implemented </body3>
             <body2 className={`${styles.body2}`}>design solutions </body2>
             <body3 className={`${styles.body3}`}>to transform customer experience for clients predominantly in the </body3>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered8(true) }
                 onMouseLeave={() => setIsHovered8(false)}
                 >
-                <motion.img src={Bank} alt="veryday" className="boe mr-2" animate={{ width: isHovered8 ? '1.5rem' : '0rem' }} />
-                <body2 className={`${styles.body2} pb-2 mr-2`}>banking </body2>
+                <motion.img src={Bank} alt="veryday" className="boe mr-1" animate={{ width: isHovered8 ? '1.1rem' : '0rem' }} />
+                <body2 className={`${styles.body2} mr-1`}>banking </body2>
             </div>
             <body3 className={`${styles.body3}`}>and </body3>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered7(true) }
                 onMouseLeave={() => setIsHovered7(false)}
                 >
-                <motion.img src={Pharma} alt="veryday" className="boe mr-2" animate={{ width: isHovered7 ? '1.5rem' : '0rem' }} />
-                <body2 className={`${styles.body2} pb-2 mr-2`}>pharma sector.</body2>
+                <motion.img src={Pharma} alt="veryday" className="boe mr-1" animate={{ width: isHovered7 ? '1.1rem' : '0rem' }} />
+                <body2 className={`${styles.body2} mr-1`}>pharma sector.</body2>
             </div>
             </div>
         </motion.div>
@@ -369,7 +364,7 @@ const Home = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-            <video class="rounded-xl" src={KanVideo} autoPlay muted loop />
+            <motion.video className="rounded-xl" src={KanVideo} autoPlay muted loop whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }}/>
             </div>
         </motion.div>
         </Link>
@@ -385,12 +380,12 @@ const Home = () => {
             <body3 className={`${styles.body3}`}>utilizing </body3>
             <body2 className={`${styles.body2}`}>human-centered frameworks </body2>
             <body3 className={`${styles.body3}`}>to identify </body3>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered10(true) }
                 onMouseLeave={() => setIsHovered10(false)}
                 >
                 <body2 className={`${styles.body2}`}>AI use cases and assess potential risks. </body2>
-                <motion.img src={Risk} alt="veryday" className="boe mr-2" animate={{ width: isHovered10 ? '1.5rem' : '0rem' }} />
+                <motion.img src={Risk} alt="veryday" className="boe mr-2" animate={{ width: isHovered10 ? '1.1rem' : '0rem' }} />
             </div>
             <body3 className={`${styles.body3}`}>As a deigner, I was ensuring </body3>
             <body2 className={`${styles.body2}`}>user needs and business requirements</body2>
@@ -401,7 +396,7 @@ const Home = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-            <video class="rounded-xl" src={McKVideo} autoPlay muted loop />
+            <motion.video class="rounded-xl" src={McKVideo} autoPlay muted loop whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }}/>
             </div>
         </motion.div>
         </Link>
@@ -417,11 +412,11 @@ const Home = () => {
             <body3 className={`${styles.body3}`}>can be balanced in </body3>
             <body2 className={`${styles.body2}`}>autonomous vehicles</body2>
             <body3 className={`${styles.body3}`}> together with </body3>
-            <div className="inline-flex align-middle" 
+            <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered12(true) }
                 onMouseLeave={() => setIsHovered12(false)}
                 >
-                <motion.img src={Volvo} alt="veryday" className="boe mr-2" animate={{ width: isHovered12 ? '1.5rem' : '0rem' }} />
+                <motion.img src={Volvo} alt="veryday" className="boe mr-2" animate={{ width: isHovered12 ? '1.1rem' : '0rem' }} />
                 <body2 className={`${styles.body2} mb-2 `}>Volvo Cars</body2>
             </div>
             <body2 className={`${styles.body2} ml-2 `}>at Umeå Institute of Design.</body2> 
@@ -431,10 +426,10 @@ const Home = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-                <img 
+                <motion.img 
                     class="rounded-xl" 
                     src={ FidoLandingNew }
-                    alt="Kan" 
+                    alt="Kan" whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }}
                 />
             </div>
         </motion.div>
@@ -490,7 +485,61 @@ const Home = () => {
             y: 0,
         },
     };
+    const defaultAnimations2 = {
+        hidden: {
+            opacity: 0,
+            y: 3,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+        },
+        movedUp: {
+            y: -200,
+            opacity: 1,
+            transition: "string"
+        },
+    };
 
+    export const AnimatedText2 = ({ once, text, className, el: Wrapper = "p", onComplete }) => {
+        const ref= useRef(null);
+        const isInView = useInView(ref, { amount: 0.5, once });
+        const [hasAnimated, setHasAnimated] = useState(false);
+
+        return(
+            React.createElement(Wrapper, { className },
+                <span className="sr-only">{text}</span>,
+                <motion.span
+                    ref={ref}
+                    initial="hidden"
+                    animate={isInView && !hasAnimated ? "visible": hasAnimated ? "movedUp" : "hidden"}
+                    transition={{ staggerChildren: 0.1 }}
+                    aria-hidden
+                    onAnimationComplete={() => {
+                        if (isInView && !hasAnimated) {
+                            setHasAnimated(true);
+                            onComplete && onComplete();
+                        }
+                    }}
+                >
+                    {text.split(" ").map((word, wordIndex) => (
+                        <span key={wordIndex} className="inline-block">
+                            {word.split("").map((char, charIndex) => (
+                                <motion.span
+                                    key={charIndex}
+                                    className="inline-block"
+                                    variants={defaultAnimations2}
+                                >
+                                    {char}
+                                </motion.span>
+                            ))}
+                            <span className="inline-block">&nbsp;</span>
+                        </span>
+                    ))}
+                </motion.span>
+        )
+    );
+    }
     export const AnimatedText = ({ once, text, className, el: Wrapper = "p" }) => {
         const ref = useRef(null);
         const isInView = useInView(ref, { amount: 0.5, once });
@@ -536,7 +585,6 @@ const Home = () => {
     };
     export const HoveredText = ({ once, text, className, el: Wrapper = "p" }) => {
         const [isHovered, setIsHovered] = useState(false);
-    
         return (
             React.createElement(Wrapper, { className },
                 <span className="sr-only">{text}</span>,
@@ -553,7 +601,38 @@ const Home = () => {
                             {word.split("").map((char, charIndex) => (
                                 <motion.span
                                     key={charIndex}
-                                    className="inline-block"
+                                    className={`inline-block ${isHovered ? "text-darkgreen" : "text-grey"}`}
+                                    variants={hoverAnimations}
+                                >
+                                    {char}
+                                </motion.span>
+                            ))}
+                            <span className="inline-block">&nbsp;</span>
+                        </span>
+                    ))}
+                </motion.span>
+            )
+        );
+    };
+    export const HoveredText2 = ({ once, text, className, el: Wrapper = "p" }) => {
+        const [isHovered, setIsHovered] = useState(false);
+        return (
+            React.createElement(Wrapper, { className },
+                <span className="sr-only">{text}</span>,
+                <motion.span
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    initial="hidden"
+                    animate={isHovered ? "visible" : "hidden"}
+                    transition={{ staggerChildren: 0.1 }}
+                    aria-hidden
+                >
+                    {text.split(" ").map((word, wordIndex) => (
+                        <span key={wordIndex} className="inline-block">
+                            {word.split("").map((char, charIndex) => (
+                                <motion.span
+                                    key={charIndex}
+                                    className={`inline-block ${isHovered ? "text-darkyellow" : "text-grey"}`}
                                     variants={hoverAnimations}
                                 >
                                     {char}
@@ -569,6 +648,8 @@ const Home = () => {
 
    
 
+   
+
 
         
  
@@ -577,6 +658,7 @@ const Home = () => {
 
 
 export default Home
+
 // import styles, { layout } from '../style';
 // import React from 'react';
 // import { useState, useRef } from 'react';
