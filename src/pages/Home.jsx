@@ -439,7 +439,7 @@ const Home = () => {
 
       <div className="w-full flex justify-between items-center mt-24 mb-12 md:flex-row flex-col pt-6 border-t-[0.7px] border-t-black ">
         <p className="font-pretendard font-light tracking-tight text-[1rem] text-black">
-            All Rights Reserved by Soheum Hwang, built by me!
+            All Rights Reserved, designed and coded by Soheum Hwang
         </p>
         <div className="flex flex-row md:mt-0 mt-6">
             <a href={"https://www.instagram.com/sohmnm/"}>

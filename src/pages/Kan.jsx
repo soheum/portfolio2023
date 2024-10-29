@@ -1,7 +1,6 @@
 import styles, { layout } from '../style';
 import { Routes, Route, Link } from 'react-router-dom';
-import React from 'react';
-import { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import Kanvideo from '../assets/Kan-recordings.mp4';
 import Kanvideo2 from '../assets/Kan_website_mockup.mp4';
 var KanTitle = require('../assets/Kan_title.png');
@@ -24,6 +23,24 @@ const Kan = () => {
         cursor2.current.style.top = `${e.clientY}px`;
         cursor2.current.style.left = `${e.clientX}px`;
     }
+
+    const [password, setPassword] = useState('');
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (password === 'soheum_projects') {
+          setIsAuthenticated(true);
+        } else {
+          alert('Incorrect password. Please try again.');
+        }
+      };
+
+      if (isAuthenticated) {
     return(
     <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
     <div className="cursor-style-kan" ref={cursor2} ></div>
@@ -185,5 +202,25 @@ const Kan = () => {
     
     </section>
 )
+}
+
+return (
+  <div onMouseMove={changePosition}>
+      <div className="cursor-style-fido" ref={cursor2} ></div>
+      <body1 className={`${styles.body1}`}>Please enter password to access the page: </body1> <br />
+      <body1 className={`${styles.body1} + text-light-grey`} id="exp-text1">Password is mentioned in the application form </body1> 
+      <form onSubmit={handleSubmit}>
+      <div class="sm:col-span-4">
+          <div class="mt-6">
+              <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+              <input type="text" name="username" id="username" autocomplete="username" value={password} onChange={handlePasswordChange} class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="  Enter password here" />
+              </div>
+          </div>
+      </div>
+
+      <button type="button submit" class="rounded-md bg-white mt-6 px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Submit</button>
+      </form>
+</div>
+);
 }
 export default Kan
