@@ -13,6 +13,9 @@ module.exports = {
              'blue': '#1E5CFF',
              'darkgreen': '#80BE06',
              'darkyellow': '#D0A61C',
+             'kan': '#EB7100',
+             'hype': '#4475F0',
+             'boe': '#35BCC0',
            },
     extend: {
       // padding: {

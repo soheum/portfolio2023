@@ -7,7 +7,7 @@ export const SFade = {
         y:0,
         opacity: 1,
         transition: {
-            delay: 1.4,         
+            delay: 1,         
         },
     },
     movedUp: {
@@ -24,7 +24,7 @@ export const OFade = {
         y: 0,
         opacity: 1,
         transition: {
-            delay: 1.5
+            delay: 1.1
         },
     },
 };
@@ -37,7 +37,7 @@ export const HFade = {
         y: 0,
         opacity: 1,
         transition: {
-            delay: 1.6
+            delay: 1.2
         },
     },
 };
@@ -50,7 +50,7 @@ export const EFade = {
         y: 0,
         opacity: 1,
         transition: {
-            delay: 1.7
+            delay: 1.3
         },
     },
 };
@@ -63,7 +63,7 @@ export const UFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 2.8
+            delay: 1.8
         },
     },
 };
@@ -76,7 +76,7 @@ export const MFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 3
+            delay: 1.9
         },
     },
 };
@@ -89,7 +89,7 @@ export const AFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 3.2
+            delay: 2
         },
     },
 };
@@ -102,7 +102,7 @@ export const BFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 3.4
+            delay: 2.1
         },
     },
 };
@@ -115,7 +115,7 @@ export const CFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 3.6
+            delay: 2.2
         },
     },
 };
@@ -128,7 +128,7 @@ export const DFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 3.8
+            delay: 2.3
         },
     },
 };
@@ -141,7 +141,7 @@ export const FFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 4
+            delay: 2.4
         },
     },
 };
@@ -154,7 +154,7 @@ export const GFade = {
         // y: 0,
         opacity: 1,
         transition: {
-            delay: 4.2
+            delay: 2.5
         },
     },
 };
@@ -184,7 +184,7 @@ export const riseWithFade = {
         transition: {
             ease: [0.6, 0.1, 0.05, 0.95],
             duration: 2,
-            delay: 4.8,
+            delay: 2.8,
         },
     },
 };
@@ -199,7 +199,7 @@ export const riseWithMoreFade = {
         transition: {
             ease: [0.6, 0.1, 0.05, 0.95],
             duration: 2,
-            delay: 4.8,
+            delay: 2.8,
         },
     },
 };
@@ -215,7 +215,7 @@ export const riseWithMoreFade2 = {
         transition: {
             ease: [0.6, 0.1, 0.05, 0.95],
             duration: 2,
-            delay: 5,
+            delay: 2.8,
         },
     },
 };
@@ -231,7 +231,7 @@ export const riseWithMoreFade3 = {
         transition: {
             ease: [0.6, 0.1, 0.05, 0.95],
             duration: 2,
-            delay: 5.2,
+            delay: 3,
         },
     },
 };
