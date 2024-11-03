@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import React, { useState, useRef } from 'react';
 import Kanvideo from '../assets/Kan-recordings.mp4';
 import Kanvideo2 from '../assets/Kan_website_mockup.mp4';
+import ScrollToTop from './ScrollToTop';
 var KanTitle = require('../assets/Kan_title.png');
 var Kan01 = require('../assets/Kan_01.png');
 var Kan03_1 = require('../assets/Kan03_1.png');
@@ -43,6 +44,7 @@ const Kan = () => {
       if (isAuthenticated) {
     return(
     <section className="w-full flex justify-start items-start overflow-hidden" onMouseMove={changePosition}>
+        <ScrollToTop />
     <div className="cursor-style-kan" ref={cursor2} ></div>
     <div className="flex-1 flex-col">
       <div className="semi-title">
@@ -206,6 +208,7 @@ const Kan = () => {
 
 return (
   <div onMouseMove={changePosition}>
+    <ScrollToTop />
       <div className="cursor-style-fido" ref={cursor2} ></div>
       <body1 className={`${styles.body1}`}>Please enter password to access the page: </body1> <br />
       <body1 className={`${styles.body1} + text-light-grey`} id="exp-text1">Password is mentioned in the application form </body1> 

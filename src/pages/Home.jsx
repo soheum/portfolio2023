@@ -11,7 +11,8 @@ import { downWithFade, riseWithFade, riseWithMoreFade, riseWithMoreFade2, riseWi
 import BoEVideo from '../assets/BoE_video.mp4';
 import BoEVideo2 from '../assets/BoE-video2.mp4';
 import McKVideo from '../assets/McK-video.mp4';
-import KanVideo from '../assets/kan-recording.mp4';
+import KanVideo from '../assets/McK-video3.mp4';
+import ScrollToTop from './ScrollToTop';
 var KanLandingNew1 = require('../assets/Kan_landing_new_1.png');
 var KanLandingNew2 = require('../assets/Kan_landing_new_2.png');
 var BoELanding1 = require('../assets/BoE_landing_1.png');
@@ -70,14 +71,15 @@ const Home = () => {
     const [isHovered21, setIsHovered21] = useState(false);
     const [isHovered22, setIsHovered22] = useState(false);
     const [isHovered23, setIsHovered23] = useState(false);
+    
 
     return(
-    <motion.section className="" initial="initial" animate="animate"  > 
-        {/* <div className="min-h-[70vh] transition-all ease-in-out delay-150 duration-1000" style={{ backgroundImage: isHoveredBottom ? "radial-gradient(60% 20% at 50% 85%, #ECFDDB, transparent" : "radial-gradient(60% 20% at 50% 85%, white, transparent"}}> */}
+        <motion.section className="" initial="initial" animate="animate" >
+        <ScrollToTop />
         <div className="flex-col mt-36">
             <div className="one-line">
                 <AnimatedText className={`${styles.heading1}`} text="Soheum Hwang" />
-                <motion.span class="grey-italics" variants={SFade}> (</motion.span>
+                <motion.span class="grey-italics" variants={SFade}>(</motion.span>
                 <motion.span class="grey-italics" variants={OFade}>s</motion.span>
                 <motion.span class="grey-italics" variants={HFade}>o</motion.span>
                 <motion.span class="grey-italics mr-2" variants={EFade}>? </motion.span>
@@ -266,7 +268,7 @@ const Home = () => {
             </div>
         </div>
         </motion.div> 
-        <motion.div className="w-full flex mt-8">
+        <motion.div className="w-full flex mt-8" variants={riseWithMoreFade}>
             <div className="basis-5/12 flex-col"></div>
             <div className="basis-7/12 flex-col">
             <a href={"mailto:sohheum@gmail.com?body=Hello! I want to know more about your work at Bank of England."}>
@@ -312,7 +314,7 @@ const Home = () => {
             <div className="basis-5/12 flex-col">
             </div>
             <div className="basis-7/12 pr-2 flex-col">
-            <motion.video className="rounded-xl" src={KanVideo} autoPlay muted loop whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }}/>
+            <motion.video className="rounded-xl" src={KanVideo} autoPlay muted loop whileHover={{ scale: 1.01 }} transition={{ duration: 0.5 }} />
             </div>
         </motion.div>
         <motion.div className="w-full flex mt-8" variants={riseWithMoreFade2}>
