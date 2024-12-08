@@ -45,6 +45,7 @@ var Email = require('../assets/at-sign@3x.png');
 var LinkedIn = require('../assets/logo-linkedin.png');
 var Youtube = require('../assets/youtube_icon.png');
 
+
 const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C'];
 
 const Home = () => {
@@ -71,14 +72,27 @@ const Home = () => {
     const [isHovered21, setIsHovered21] = useState(false);
     const [isHovered22, setIsHovered22] = useState(false);
     const [isHovered23, setIsHovered23] = useState(false);
-    
+
+    const [shouldAnimate, setShouldAnimate] = useState(true);
+    useEffect(() => {
+        console.log('Previous animation state:', sessionStorage.getItem('homeAnimated'));
+        const hasAnimated = sessionStorage.getItem('homeAnimated');
+        if (hasAnimated) {
+          setShouldAnimate(false);
+        } else {
+          sessionStorage.setItem('homeAnimated', 'true');
+        }
+        console.log('Should animate:', !hasAnimated);
+      }, []);
 
     return(
         <motion.section className="" initial="initial" animate="animate" >
         <ScrollToTop />
         <div className="flex-col mt-36">
             <div className="one-line">
-                <AnimatedText className={`${styles.heading1}`} text="Soheum Hwang" />
+                <AnimatedText className={`${styles.heading1}`} text="Soheum Hwang" 
+                initial={shouldAnimate ? "initial" : false} 
+                animate={shouldAnimate ? "animate" : false}/>
                 <motion.span class="grey-italics" variants={SFade}>(</motion.span>
                 <motion.span class="grey-italics" variants={OFade}>s</motion.span>
                 <motion.span class="grey-italics" variants={HFade}>o</motion.span>
@@ -148,7 +162,7 @@ const Home = () => {
                 >
                     <motion.img src={Thinking} alt="veryday" className="boe mr-1" animate={{ width: isHovered23 ? '1.1rem' : '0rem' }} />
                     <body2 className={`${styles.body2} mr-1`}> way of thinking and as a practical tool</body2> </div>
-                <body3 className={`${styles.body3} `}> for solving real-world challenges,</body3>
+                <body3 className={`${styles.body3} `}> for solving real-world challenges, </body3>
                 <body3 className={`${styles.body3} `}>I'm currently at </body3>
                 <div className="inline-flex items-baseline" 
                 onMouseEnter={() => setIsHovered(true) }
