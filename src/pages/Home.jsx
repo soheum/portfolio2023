@@ -73,26 +73,12 @@ const Home = () => {
     const [isHovered22, setIsHovered22] = useState(false);
     const [isHovered23, setIsHovered23] = useState(false);
 
-    const [shouldAnimate, setShouldAnimate] = useState(true);
-    useEffect(() => {
-        console.log('Previous animation state:', sessionStorage.getItem('homeAnimated'));
-        const hasAnimated = sessionStorage.getItem('homeAnimated');
-        if (hasAnimated) {
-          setShouldAnimate(false);
-        } else {
-          sessionStorage.setItem('homeAnimated', 'true');
-        }
-        console.log('Should animate:', !hasAnimated);
-      }, []);
-
     return(
         <motion.section className="" initial="initial" animate="animate" >
         <ScrollToTop />
         <div className="flex-col mt-36">
             <div className="one-line">
-                <AnimatedText className={`${styles.heading1}`} text="Soheum Hwang" 
-                initial={shouldAnimate ? "initial" : false} 
-                animate={shouldAnimate ? "animate" : false}/>
+                <AnimatedText className={`${styles.heading1}`} text="Soheum Hwang" />
                 <motion.span class="grey-italics" variants={SFade}>(</motion.span>
                 <motion.span class="grey-italics" variants={OFade}>s</motion.span>
                 <motion.span class="grey-italics" variants={HFade}>o</motion.span>
@@ -112,7 +98,7 @@ const Home = () => {
         </div>
         <motion.div className="mt-12 flex" variants={riseWithMoreFade2}>
             <div className="justify-start flex-col basis-2/12">
-                <a href="https://drive.google.com/file/d/1m7AMO-KRl-YbCw8SUdZ_WBI1eJKsY6jk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/15KAb5xRktBRJk8aWyaqm8oDybZPdHs3I/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     <HoveredText className={`font-pretendard font-light tracking-tight text-[1.15rem] leading-normal mr-6 mb-2`} text="Link to CV" />
                 </a>
                 <a href={"mailto:sohheum@gmail.com?body=Hello! Let's grab a coffee"}>
@@ -437,7 +423,7 @@ const Home = () => {
     const defaultAnimations = {
         hidden: {
             opacity: 0,
-            y: 3,
+            y: 1,
         },
         visible: {
             opacity: 1,
@@ -501,7 +487,7 @@ const Home = () => {
     }
     export const AnimatedText = ({ once, text, className, el: Wrapper = "p" }) => {
         const ref = useRef(null);
-        const isInView = useInView(ref, { amount: 0.5, once });
+        const isInView = useInView(ref, { amount: 0.2, once });
     
         return (
             React.createElement(Wrapper, { className },
@@ -510,7 +496,7 @@ const Home = () => {
                     ref={ref}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    transition={{ staggerChildren: 0.1 }}
+                    transition={{ staggerChildren: 0.08 }}
                     aria-hidden
                 >
                     {text.split(" ").map((word, wordIndex) => (
